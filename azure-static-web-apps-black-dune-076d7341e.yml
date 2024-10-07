@@ -23,10 +23,10 @@ jobs:
   - task: UseNode@1
     inputs:
       version: '18.x'
-    - script: |
+  - script: |
         npm install
         ng build --configuration=production
-      displayName: 'Install dependencies and build'
+    displayName: 'Install dependencies and build'
   - task: AzureStaticWebApp@0
     inputs:
       azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_DUNE_076D7341E)
