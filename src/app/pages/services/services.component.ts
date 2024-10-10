@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { CardInputComponent } from '../../shared/components/card-input/card-input.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [],
+  imports: [CardInputComponent,RouterLink],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })

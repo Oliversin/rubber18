@@ -6,14 +6,15 @@ export const routes: Routes = [
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
             {
-                path: 'home',
-                loadComponent: () => import('./pages/home/home.component')
-            },
-            {
                 path: '',
                 redirectTo: 'home',
                 pathMatch: 'full'
             },
+            {
+                path: 'home',
+                loadComponent: () => import('./pages/home/home.component')
+            },
+            
             {
                 path: 'about',
                 loadComponent: () => import('./pages/about/about.component')

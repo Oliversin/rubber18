@@ -2,12 +2,13 @@ import { Component,OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { GalleryComponent } from '../../shared/components/gallery/gallery.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { PartnersTrustComponent } from '../../shared/components/partners-trust/partners-trust.component';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink,GalleryComponent],
+  imports: [RouterLink,GalleryComponent,PartnersTrustComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
