@@ -40,29 +40,7 @@
       <a routerLink="/services" class="bg-[#37bef0] text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
     </div>
   </div>
- 
-  <div class="flex items-center justify-center w-full p-4">
-    <hlm-carousel class="w-full max-w-xs">
-      <hlm-carousel-content>
-      @for ( item of [].constructor(10); track $index) {
-        <hlm-carousel-item>
-          <div class="p-1">
-            <section hlmCard>
-              <p hlmCardContent class="flex items-center justify-center p-6 aspect-square">
-                
-                {{$index}}
-              </p>
-            </section>
-          </div>
-        </hlm-carousel-item>
-      }
-      </hlm-carousel-content>
-      <button hlm-carousel-previous></button>
-      <button hlm-carousel-next></button>
-    </hlm-carousel>
-  </div>
 
-  
 
 <section class="px-4 py-5 bg-neutral-100 lg:py-10">
     <div class="grid lg:grid-cols-2 items-center justify-items-center gap-5">
