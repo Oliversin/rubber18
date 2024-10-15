@@ -1,3 +1,29 @@
+<section class="announcement-bar">
+  <div class="announcement-container text-white grid grid-cols-3">
+    
+    <div class="announcement-item ">
+      <a href="emailto:sales@rotomoldmexico.com">
+        <div class="text-center"><b>Email Us Today!</b>
+          <p class=" italic"><a href="emailto:sales@rotomoldmexico.com">sales&#64;rotomoldmexico.com</a></p>
+        </div>
+      </a>
+    </div>
+    <div class="announcement-item active ">
+      <a routerLink="/contact">
+        <div class="text-center"><b>Request A Quote Now</b>
+          <p class="italic">Clicking here</p>
+        </div>
+      </a>
+    </div>
+    <div class="announcement-item ">
+      <a href="tel:+19362352011">
+        <div class="text-center"><b>Call Us Today!</b>
+          <p class="italic">tel:<a href="tel:+19362352011">+1.936.235.2011</a></p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-[60vh] text-white overflow-hidden">
     <div class="absolute inset-0">
       <img src="/assets/test_banner.png" alt="Background Image" class="object-cover object-center w-full h-full" />
@@ -9,12 +35,34 @@
     </div>
     
     <div class="relative z-10 flex flex-col justify-center items-center h-full text-center  mx-8">
-      <h1 class="text-3xl md:text-6xl font-bold leading-tight mb-4 px-4">Welcome to <span class="text-[#3dabd3] hover:opacity-95">RotomoldMexico</span></h1>
+      <h1  class="text-3xl md:text-6xl font-bold leading-tight mb-4 px-4">Welcome to <span class="text-[#3dabd3] hover:opacity-95">RotomoldMexico</span></h1>
       <p class="text-lg text-gray-200 mb-8">Discover amazing features and services that await you.</p>
       <a routerLink="/services" class="bg-[#37bef0] text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
     </div>
   </div>
+ 
+  <div class="flex items-center justify-center w-full p-4">
+    <hlm-carousel class="w-full max-w-xs">
+      <hlm-carousel-content>
+      @for ( item of [].constructor(10); track $index) {
+        <hlm-carousel-item>
+          <div class="p-1">
+            <section hlmCard>
+              <p hlmCardContent class="flex items-center justify-center p-6 aspect-square">
+                
+                <img class="md:w-60 w-40 mx-auto md:mx-0 md:mt-4 mt-1 " src="/assets/iso9001.png" alt="">
+              </p>
+            </section>
+          </div>
+        </hlm-carousel-item>
+      }
+      </hlm-carousel-content>
+      <button hlm-carousel-previous></button>
+      <button hlm-carousel-next></button>
+    </hlm-carousel>
+  </div>
 
+  
 
 <section class="px-4 py-5 bg-neutral-100 lg:py-10">
     <div class="grid lg:grid-cols-2 items-center justify-items-center gap-5">
@@ -26,7 +74,7 @@
 
         </div>
         <div class="order-1 lg:order-2">
-            <img class="" src="/assets/Banner-Mapa-Oliver_800x500px.png" alt="">
+            <img class="" src="/assets/Banner-Mapa-Oliver_800x500px-v3.png" alt="">
         </div>
     </div>
     
@@ -50,7 +98,7 @@
           <i class="fa-solid fa-chart-column text-3xl text-gray-900"></i>
         </div>
         <h3 class="mt-12 text-xl font-bold text-gray-900">Space & Analysis</h3>
-        <p class="mt-5 text-base text-gray-600">We have over 250,000ft2 of manufacturing space in Baja California, Mexico with many capabilities. We have 6 rotomolding machines that vary from 1.9 meter oven diamaters to 4.5 meteres.</p>
+        <p class="mt-5 text-base text-gray-600">We have over {{vars.ourSize}} of manufacturing space in Baja California, Mexico with many capabilities. We have  {{vars.rotomoldingMachines}} that vary from 1.9 meter oven diamaters to 4.5 meteres.</p>
       </div>
 
       <!-- Feature 2 -->
@@ -59,7 +107,7 @@
           <i class="fa-solid fa-truck-fast text-3xl text-gray-900"></i>
         </div>
         <h3 class="mt-12 text-xl font-bold text-gray-900">Fast Integration</h3>
-        <p class="mt-5 text-base text-gray-600">We have trucks crossing into the USA every single day with warehouses on the West Coast, East Coast, and even in Canada! We can ship product worldwide.</p>
+        <p class="mt-5 text-base text-gray-600">We have trucks crossing into the USA every single day with warehouses on the {{vars.warehouses}}! We can ship product worldwide.</p>
       </div>
 
       <!-- Feature 3 -->

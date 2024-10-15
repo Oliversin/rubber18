@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5482053128910207641" datatype="html">
+        <source>6 rotomolding machines</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/global-vars.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3170635718578416947" datatype="html">
+        <source>West Coast, East Coast, and even in Mexico</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/global-vars.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5672724443487977931" datatype="html">
+        <source>Monday - Friday : 8AM - 5:30pm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/global-vars.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

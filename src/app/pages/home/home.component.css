@@ -1,0 +1,20 @@
+.announcement-bar {
+    background: linear-gradient(
+      152deg,
+      rgb(20, 143, 180) 25%,
+      rgba(20, 84, 87, 1) 51%,
+      rgba(20, 143, 180) 80%
+    );
+    background-size: 200% 200%;
+    animation: looper 5s linear infinite;
+  }
+  
+  @keyframes looper {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+  

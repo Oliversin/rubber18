@@ -3,17 +3,23 @@ import { RouterLink } from '@angular/router';
 import { GalleryComponent } from '../../shared/components/gallery/gallery.component';
 import { Meta, Title } from '@angular/platform-browser';
 import { PartnersTrustComponent } from '../../shared/components/partners-trust/partners-trust.component';
+import { GlobalVars } from '../../global-vars';
+
+import { HlmCarouselComponent, HlmCarouselContentComponent,HlmCarouselItemComponent,HlmCarouselNextComponent,HlmCarouselPreviousComponent } from '@spartan-ng/ui-carousel-helm';
+
+
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink,GalleryComponent,PartnersTrustComponent],
+  imports: [RouterLink,GalleryComponent,PartnersTrustComponent, HlmCarouselComponent, HlmCarouselContentComponent,HlmCarouselItemComponent, HlmCarouselNextComponent, HlmCarouselPreviousComponent],
+  providers: [GlobalVars],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export default class HomeComponent implements OnInit{
-  constructor(private meta: Meta, private titleService: Title) { }
+  constructor(private meta: Meta, private titleService: Title, protected vars:GlobalVars) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Rotomold Mexico - Home');

@@ -2,16 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { VisitUsComponent } from '../../shared/components/visit-us/visit-us.component';
 import { RouterLink } from '@angular/router';
+import { GlobalVars } from '../../global-vars';
 
 @Component({
   selector: 'app-about',
   standalone: true,
+  providers:[GlobalVars],
   imports: [VisitUsComponent,RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
 export default class AboutComponent implements OnInit{
-  constructor(private meta: Meta, private titleService: Title) { }
+  constructor(private meta: Meta, private titleService: Title, protected vars:GlobalVars) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('About Us - Your Angular App');

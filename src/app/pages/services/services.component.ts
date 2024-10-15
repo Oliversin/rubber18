@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { CardInputComponent } from '../../shared/components/card-input/card-input.component';
 import { RouterLink } from '@angular/router';
+import { RubberAdComponent } from '../../shared/components/rubber-ad/rubber-ad.component';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CardInputComponent,RouterLink],
+  imports: [CardInputComponent, RouterLink,RubberAdComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })

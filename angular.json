@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "rotomold18": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "es-MX": "src/messages.locale/es.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,11 +19,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize":[ "en-US" ],
             "outputPath": "dist/rotomold18",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -28,7 +36,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           },
@@ -76,7 +84,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [

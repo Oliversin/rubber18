@@ -1,37 +1,62 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {NgClass} from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
+import { GlobalVars } from '../../global-vars';
 
 @Component({
   selector: 'app-faq',
   standalone: true,
+  providers:[GlobalVars],
   imports: [NgClass],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
 })
-export default class FaqComponent {
+export default class FaqComponent implements OnInit{
+  constructor(private meta: Meta, private titleService: Title, public vars:GlobalVars) {
+    this.faqs = [
+      { question: 'What Rotomolding Manufacturing Processes do you have?', 
+        isActive: true,
+        answer: 'We have over '+this.vars.ourSize+' of manufacturing space in Baja California, Mexico with many capabilities. We have '+this.vars.rotomoldingMachines+' that vary from 1.9 meter oven diamaters to 4.5 meteres.' 
+      },
+      { question: 'What is the minimum order amount?', 
+        isActive: false,
+        answer: 'We are setup to service every project from one off projects to full scale production!' 
+  
+      },
+      { question: 'Which countries do you ship to?', 
+        isActive: false,
+        answer: 'We have trucks crossing into the USA every single day with warehouses on the West Coast, East Coast, and even in Canada! We are located within a few miles of the port of Ensenada and within a few hours from the Port of Long Beach and can ship product worldwide.' 
+  
+      },
+      { question: 'Are you ISO 9001 certified?', 
+        isActive: false,
+        answer: 'Yes, we are ISO 9001 certified!' 
+  
+      },
+    ];
+   }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Rotomold Mexico - FAQ');
+    
+    // Standard Meta Tags
+    this.meta.addTag({ name: 'description', content: 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call' });
+    this.meta.addTag({ name: 'keywords', content: 'Rotational Molding, Rotomold Mexico, Mold Making, Foam Insulation, Shipping, Stocking, Compression Molding, Extrusion, Rapid Prototyping, Quality Manufacturing' });
+
+    // Open Graph Meta Tags
+    this.meta.addTag({ property: 'og:title', content: 'RotomoldMexico - FAQ' });
+    this.meta.addTag({ property: 'og:description', content: 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call' });
+    this.meta.addTag({ property: 'og:image', content: '/assets/logoHeader.png' });
+  }
+
   isOpen = false;
   openIndex: number | null = null; // Track which FAQ is open
 
   faqs = [
     { question: 'What Rotomolding Manufacturing Processes do you have?', 
       isActive: true,
-      answer: 'We have over 250,000ft2 of manufacturing space in Baja California, Mexico with many capabilities. We have 6 rotomolding machines that vary from 1.9 meter oven diamaters to 4.5 meteres.' 
-    },
-    { question: 'What is the minimum order amount?', 
-      isActive: false,
-      answer: 'We are setup to service every project from one off projects to full scale production!' 
-
-    },
-    { question: 'Which countries do you ship to?', 
-      isActive: false,
-      answer: 'We have trucks crossing into the USA every single day with warehouses on the West Coast, East Coast, and even in Canada! We are located within a few miles of the port of Ensenada and within a few hours from the Port of Long Beach and can ship product worldwide.' 
-
-    },
-    { question: 'Are you ISO 9001 certified?', 
-      isActive: false,
-      answer: 'Yes, we are ISO 9001 certified!' 
-
-    },
+      answer: 'We have over of manufacturing space in Baja California, Mexico with many capabilities. We have 6 rotomolding machines that vary from 1.9 meter oven diamaters to 4.5 meteres.' 
+    }
   ];
 
 
