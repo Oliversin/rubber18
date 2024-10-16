@@ -4,12 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "rotomold18": {
-      "i18n": {
-        "sourceLocale":"en-US",
-        "locales": {
-          "es-MX": "src/messages.locale/es.xlf"
-        }
-      },
+      
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -19,7 +14,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize":[ "en-US" ],
+            
             "outputPath": "dist/rotomold18",
             "index": "src/index.html",
             "browser": "src/main.ts",
