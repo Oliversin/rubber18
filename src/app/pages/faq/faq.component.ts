@@ -33,6 +33,31 @@ export default class FaqComponent implements OnInit{
         answer: 'Yes, we are ISO 9001 certified!' 
   
       },
+      { question: 'What’s the biggest part you can run?', 
+        isActive: false,
+        answer: '12 long part. But depending on the project, different machines and arms can be used to accommodate your needs' 
+  
+      },
+      { question: 'Are molds stored inside or outside?', 
+        isActive: false,
+        answer: 'Molds are stored inside and away from harsh weather' 
+  
+      },
+      { question: 'Do you require MOQs?', 
+        isActive: false,
+        answer: 'Yes, we do require MOQs. It all depends on the customer and project' 
+  
+      },
+      { question: 'Can you make coolers?', 
+        isActive: false,
+        answer: 'Unfortunately at this time we are not in the market to manufacture coolers' 
+  
+      },
+      { question: 'Can you do full assemblies?', 
+        isActive: false,
+        answer: 'Assemblies will be considered depending on the customer and its requirements, but not something we specialize in.' 
+  
+      },
     ];
    }
 

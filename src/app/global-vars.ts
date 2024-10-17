@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
 
 export class GlobalVars {
     ourSize = "330,000ft2";
-    phone = "+1.936.235.2011";
+    phone = "+1.909.232.8934";
+    phoneCayman = "+1.936.235.2011";
     email = "sales@rotomoldmexico.com";
     address1 = "Paseo, Bahía Todos Santos 322, Ex-Ejido Chapultepec, 22785 Ensenada, B.C., Mexico";
     address2 = "15461 Slover Ave, Fontana, CA 92337, United States";

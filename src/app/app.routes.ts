@@ -43,6 +43,14 @@ export const routes: Routes = [
                 path: 'services/mold-making',
                 loadComponent: () => import('./pages/mold-making/mold-making.component')
             },
+            {
+                path: 'services/post-processing',
+                loadComponent: () => import('./pages/post-processing/post-processing.component')
+            },
+            {
+                path: 'services/foam-insulation',
+                loadComponent: () => import('./pages/foam-insulation/foam-insulation.component')
+            },
         ]
     },
     {
