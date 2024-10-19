@@ -51,6 +51,14 @@ export const routes: Routes = [
                 path: 'services/foam-insulation',
                 loadComponent: () => import('./pages/foam-insulation/foam-insulation.component')
             },
+            {
+                path: 'services/other-services',
+                loadComponent: () => import('./pages/other-services/other-services.component')
+            },
+            {
+                path: 'engineers',
+                loadComponent: () => import('./pages/engineers/engineers.component')
+            },
         ]
     },
     {

@@ -1,0 +1,25 @@
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    transition-timing-function: linear !important;
+    position: relative;
+  }
+  
+  .swiper-pagination {
+    display: flex; /* Ensure bullets are displayed as flex items */
+    justify-content: center; /* Center the bullets */
+    padding: 10px 0; /* Adjust spacing */
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px; /* Adjust bullet size */
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px; /* Space between bullets */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #4F46E5 !important;
+    opacity: 1; /* Fully opaque for active bullet */
+  }
