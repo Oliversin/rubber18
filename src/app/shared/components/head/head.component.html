@@ -1,4 +1,4 @@
-<nav class="bg-[#1a1717] border border-gray-200 dark:border-gray-700 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow">
+<nav class="bg-[#1a1717] border border-black dark:border-gray-700 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="/" class="flex items-center">
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
@@ -24,13 +24,13 @@
     </div>
 
     <div  class="w-full md:block md:w-auto">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
+      <ul [ngClass]="{'hidden': isMenuHidden, 'flex': !isMenuHidden}" class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:flex md:visible">
         @for (item of navItems; track item.link){
           <li >
             <a
               [routerLink]="item.link"
-              routerLinkActive="block py-2 pr-4 bg-blue-700 rounded md:bg-transparent md:text-[#1a9bc9] md:p-0 dark:text-white"
-              class="text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#1a9bc9] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              routerLinkActive="block py-2 pr-4 bg-[#1a9bc9] rounded md:bg-transparent md:text-[#1a9bc9] md:p-0 dark:text-white"
+              class="text-white  hover:bg-[#1a9bc9] md:hover:bg-transparent md:border-0 md:hover:text-[#1a9bc9] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               aria-current="page"
             >
               {{ item.label }}

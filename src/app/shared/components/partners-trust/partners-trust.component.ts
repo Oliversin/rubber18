@@ -22,6 +22,8 @@ export class PartnersTrustComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     const swiper = new Swiper('.centered-slide-carousel', {
+      observer: true,
+      observeParents: true,
       centeredSlides: true,
       effect: "coverflow",
       loop: true,

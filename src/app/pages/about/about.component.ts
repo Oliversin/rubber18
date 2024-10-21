@@ -16,11 +16,14 @@ export default class AboutComponent implements OnInit{
   constructor(private meta: Meta, private titleService: Title, protected vars:GlobalVars) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('About Us - Your Angular App');
-    this.meta.updateTag({ name: 'description', content: 'Learn more about us at Your Angular App.' });
-    this.meta.updateTag({ name: 'keywords', content: 'Angular, About Us, Company' });
-    this.meta.updateTag({ property: 'og:title', content: 'About Us - Your Angular App' });
-    this.meta.updateTag({ property: 'og:description', content: 'Learn more about us at Your Angular App.' });
-    this.meta.updateTag({ property: 'og:image', content: 'path/to/about-image.png' });
+    this.titleService.setTitle('About Us - Rotomold Mexico');
+    this.meta.updateTag({ name: 'description', content: 'Rotomold Mexico, a family-owned leader in advanced manufacturing, operates a vertically integrated facility in Ensenada, Mexico.' });
+    this.meta.updateTag({ name: 'keywords', content: 'rotomold, rotomolding, About Us, Company' });
+    this.meta.updateTag({ property: 'og:title', content: 'About Us - Rototmold Mexico' });
+    this.meta.updateTag({ property: 'og:description', content: 'Rotomold Mexico, a family-owned leader in advanced manufacturing, operates a vertically integrated facility in Ensenada, Mexico.' });
+    this.meta.updateTag({ property: 'og:url', content: 'http://localhost:4200/about' });
+    this.meta.updateTag({ property: 'og:image', href: '/assets/familyBusiness.png' });
+    
+    
   }
 }

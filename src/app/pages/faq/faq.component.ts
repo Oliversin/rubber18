@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {NgClass} from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { GlobalVars } from '../../global-vars';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-faq',
   standalone: true,
   providers:[GlobalVars],
-  imports: [NgClass],
+  imports: [NgClass, RouterLink],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
 })

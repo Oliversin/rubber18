@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { GlobalVars } from '../../global-vars';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact',
@@ -11,10 +13,11 @@ import { GlobalVars } from '../../global-vars';
   styleUrl: './contact.component.css'
 })
 export default class ContactComponent {
+  
   constructor(private meta: Meta, private titleService: Title, protected vars:GlobalVars) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Rotomold Mexico - Home');
+    this.titleService.setTitle('Rotomold Mexico - Contact Us');
 
     // Standard Meta Tags
     this.meta.addTag({ name: 'description', content: 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call' });
