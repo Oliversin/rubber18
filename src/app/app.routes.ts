@@ -5,13 +5,9 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
+            
             {
                 path: '',
-                redirectTo: 'home',
-                pathMatch: 'full'
-            },
-            {
-                path: 'home',
                 loadComponent: () => import('./pages/home/home.component')
             },
             
@@ -63,6 +59,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: 'home',
+        redirectTo: '',
     },
 ];

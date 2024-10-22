@@ -6,20 +6,25 @@
     <span class="bg-clip-text text-cyan-700">Explore a selection of our work! We’d love to hear how we can bring your vision to life.</span>
     <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-cyan-600 to-cyan-900"></span>
   </h2>
-  <div class="swiper centered-slide-carousel">
-    <div class="swiper-wrapper">
-      @for (slide of slido.src; track $index) {
-        <div class="swiper-slide">
-          <div class="bg-indigo-50 rounded-2xl h-44 md:h-80 flex justify-center items-center swiper-zoom-container">
-            <img loading="lazy" src="/assets/services/moldMaking.png" alt="">
-          </div>
-        </div>
-      }
-    </div>
-    <!-- Navigation buttons -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
 </div>
+
+
+<swiper-container class="swiper-container" 
+  autoplay="true"
+  navigation="true"
+  slides-per-view="3" 
+  speed="500" 
+  pagination="true" 
+  loop="true"
+  effect="coverflow"
+  grab-cursor="true"
+  centered-slide="true"
+  
+>
+  @for (slide of slido.src; track $index) {
+    <swiper-slide lazy="true">
+      <img loading="lazy" src="/assets/services/moldMaking.png" alt="">
+    </swiper-slide>
+  }
+  
+</swiper-container>

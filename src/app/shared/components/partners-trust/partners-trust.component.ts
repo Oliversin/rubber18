@@ -4,6 +4,9 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
 
+import { SwiperContainer } from 'swiper/element';
+import { SwiperOptions } from 'swiper/types';
+
 
 @Component({
   selector: 'app-partners-trust',
@@ -21,7 +24,9 @@ export class PartnersTrustComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const swiper = new Swiper('.centered-slide-carousel', {
+    const swiperEl = document.querySelector('swiper-container');
+
+    const swiper = new Swiper('swiper-container', {
       observer: true,
       observeParents: true,
       centeredSlides: true,
@@ -35,14 +40,6 @@ export class PartnersTrustComponent implements AfterViewInit {
         pauseOnMouseEnter: true,
       },
       slideToClickedSlide: false,
-      pagination: {
-        el: '.centered-slide-carousel .swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
       breakpoints: {
         1920: {
           slidesPerView: 3,
@@ -58,5 +55,9 @@ export class PartnersTrustComponent implements AfterViewInit {
         }
       }
     });
+
+    
+
+
   }
 }
