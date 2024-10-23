@@ -9,22 +9,23 @@
 </div>
 
 
-<swiper-container class="swiper-container" 
-  autoplay="true"
-  navigation="true"
-  slides-per-view="3" 
-  speed="500" 
-  pagination="true" 
-  loop="true"
-  effect="coverflow"
-  grab-cursor="true"
-  centered-slide="true"
-  
->
-  @for (slide of slido.src; track $index) {
-    <swiper-slide lazy="true">
-      <img loading="lazy" src="/assets/services/moldMaking.png" alt="">
-    </swiper-slide>
-  }
-  
-</swiper-container>
+  <swiper-container class="swiper-container mb-6" 
+    autoplay="true"
+    navigation="true"
+    
+    speed="500" 
+    pagination="true" 
+    [loop]="slido.src.length > slidesPerView"
+    effect="coverflow"
+    grab-cursor="true"
+    centered-slide="true"
+    [breakpoints]="breakpoints"
+    
+  >
+    @for (slide of slido.src; track $index) {
+      <swiper-slide class="mb-6" >
+        <img loading="lazy" src="/assets/services/moldMaking.png" alt="">
+      </swiper-slide>
+    }
+    
+  </swiper-container>

@@ -1,0 +1,17 @@
+<re-captcha 
+    id="recaptcha"
+    name="recaptcha"
+    #recaptcha="ngModel"
+    [(ngModel)]="token"
+    (resolved)="onCaptchaSuccess($event)"
+    required
+    [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"
+    siteKey="6Lc7BmkqAAAAAFmFuiKTwrB5MPRSfLic8iI-_WfP">
+</re-captcha>
+@if (recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)) {
+    <div class="invalid-feedback">
+        @if (recaptcha.errors?.['required']) {
+            <div >This field is required.</div>
+        }
+    </div>
+}

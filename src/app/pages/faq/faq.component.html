@@ -13,7 +13,7 @@
           Answers to the most frequently asked questions.
         </p>
         <div class="w-full lg:justify-start justify-center items-start flex md:mt-0 mt-4">
-            <div class="relative flex flex-col sm:flex-row xl:flex-col items-start">
+            <div class="relative flex flex-col  items-start">
                 <div class="order-1 sm:ml-6 xl:ml-0">
                     <h3 class="mb-1 text-slate-900 font-semibold">
                         <span class="mb-1 block text-sm leading-6 text-indigo-500">Ask Us Anything</span>
@@ -35,7 +35,25 @@
                             <path d="M0 0L3 3L0 6"></path>
                         </svg></a>
                 </div>
-                <img src="assets/iso9001.png" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-1/2 sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                <div>
+                  <swiper-container
+                    class="w-48 mb-6 swiper-container"
+                    autoplay="true"
+                    slides-per-view="1"
+                    loop="true"
+                    effect="cube"
+                    speed="500" 
+                    pagination="true" 
+                    scrollbar="true"
+                  >
+                    @for (slide of slides; track $index) {
+                      <swiper-slide class="mb-6">
+                        <img loading="lazy" src="/assets/faq/{{slide}}" alt="">
+                      </swiper-slide>
+                    }
+                  </swiper-container>
+                </div>
+                
               </div>
           
         </div>

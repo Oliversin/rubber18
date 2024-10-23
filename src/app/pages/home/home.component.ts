@@ -21,15 +21,30 @@ export default class HomeComponent implements OnInit{
   constructor(private meta: Meta, private titleService: Title, protected vars:GlobalVars) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('Rotomold Mexico - Home');
+    this.titleService.setTitle('RotomoldMexico - Home');
 
     // Standard Meta Tags
-    this.meta.addTag({ name: 'description', content: 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call' });
-    this.meta.addTag({ name: 'keywords', content: 'Rotational Molding, Rotomold Mexico, Mold Making, Foam Insulation, Shipping, Stocking, Compression Molding, Extrusion, Rapid Prototyping, Quality Manufacturing' });
+    this.addMetaTag('description', 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call');
+    this.addMetaTag('keywords', 'Rotational Molding, Rotomold Mexico, Mold Making, Foam Insulation, Shipping, Stocking, Compression Molding, Extrusion, Rapid Prototyping, Quality Manufacturing');
 
     // Open Graph Meta Tags
-    this.meta.addTag({ property: 'og:title', content: 'RotomoldMexico - Home' });
-    this.meta.addTag({ property: 'og:description', content: 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call' });
-    this.meta.addTag({ property: 'og:image', content: '/assets/logoHeader.png' });
+    this.addMetaTag('og:title', 'RotomoldMexico - Home', 'property');
+    this.addMetaTag('og:description', 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call', 'property');
+    this.addMetaTag('og:image', '/assets/logoHeader.png', 'property'); // Update with the correct image path
+
+    // Twitter Card Tags
+    this.addMetaTag('twitter:card', 'summary_large_image');
+    this.addMetaTag('twitter:title', 'RotomoldMexico - Home');
+    this.addMetaTag('twitter:description', 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call');
+    this.addMetaTag('twitter:image', '/assets/logoHeader.png'); // Update with the correct image path
+
+    // Robots Meta Tag
+    this.addMetaTag('robots', 'index, follow');
+  }
+
+  private addMetaTag(name: string, content: string, type: string = 'name') {
+    if (!this.meta.getTag(`${type}='${name}'`)) {
+      this.meta.addTag({ [type]: name, content });
+    }
   }
 }

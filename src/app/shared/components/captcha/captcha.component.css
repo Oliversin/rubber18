@@ -1,0 +1,10 @@
+.is-invalid {
+    border-color: #dc3545; /* Red border for invalid inputs */
+    background-color: #f8d7da; /* Light red background */
+  }
+  
+  .invalid-feedback {
+    color: #dc3545; /* Red text for error messages */
+    font-size: 0.875rem; /* Smaller font size for error messages */
+    margin-top: 0.25rem; /* Spacing above the error message */
+  }

@@ -1,18 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {NgClass} from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { GlobalVars } from '../../global-vars';
 import { RouterLink } from '@angular/router';
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+
 
 @Component({
   selector: 'app-faq',
   standalone: true,
   providers:[GlobalVars],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [NgClass, RouterLink],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
 })
 export default class FaqComponent implements OnInit{
+  
+  slides = ['iso9k1.webp', '5S.webp', 'AMEF.webp', 'ppap.webp'];
+  
   constructor(private meta: Meta, private titleService: Title, public vars:GlobalVars) {
     this.faqs = [
       { question: 'What Rotomolding Manufacturing Processes do you have?', 
@@ -62,17 +71,32 @@ export default class FaqComponent implements OnInit{
     ];
    }
 
-  ngOnInit(): void {
-    this.titleService.setTitle('Rotomold Mexico - FAQ');
-    
+   ngOnInit(): void {
+    this.titleService.setTitle('Frequently Asked Questions - Rotomold Mexico');
+
     // Standard Meta Tags
-    this.meta.addTag({ name: 'description', content: 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call' });
-    this.meta.addTag({ name: 'keywords', content: 'Rotational Molding, Rotomold Mexico, Mold Making, Foam Insulation, Shipping, Stocking, Compression Molding, Extrusion, Rapid Prototyping, Quality Manufacturing' });
+    this.addMetaTag('description', 'Find answers to the most frequently asked questions about Rotomold Mexico and our services. Get the information you need to make informed decisions.');
+    this.addMetaTag('keywords', 'FAQ, Frequently Asked Questions, Rotomold Mexico, Customer Support, Rotational Molding');
 
     // Open Graph Meta Tags
-    this.meta.addTag({ property: 'og:title', content: 'RotomoldMexico - FAQ' });
-    this.meta.addTag({ property: 'og:description', content: 'Rotomold Mexico, Family Owned with over 50 years of experience. 6 rotomolding machines with mold making capabilities. 3 distribution centers in the USA and plenty of capability to grow. Compound and pulverize in house. Request a quote or give us a call' });
-    this.meta.addTag({ property: 'og:image', content: '/assets/logoHeader.png' });
+    this.addMetaTag('og:title', 'Frequently Asked Questions - Rotomold Mexico', 'property');
+    this.addMetaTag('og:description', 'Find answers to the most frequently asked questions about Rotomold Mexico and our services. Get the information you need to make informed decisions.', 'property');
+    this.addMetaTag('og:image', '/assets/faqImage.png', 'property'); // Update with the correct image path
+
+    // Twitter Card Tags
+    this.addMetaTag('twitter:card', 'summary_large_image');
+    this.addMetaTag('twitter:title', 'Frequently Asked Questions - Rotomold Mexico');
+    this.addMetaTag('twitter:description', 'Find answers to the most frequently asked questions about Rotomold Mexico and our services. Get the information you need to make informed decisions.');
+    this.addMetaTag('twitter:image', '/assets/faqImage.png'); // Update with the correct image path
+
+    // Robots Meta Tag
+    this.addMetaTag('robots', 'index, follow');
+  }
+
+  private addMetaTag(name: string, content: string, type: string = 'name') {
+    if (!this.meta.getTag(`${type}='${name}'`)) {
+      this.meta.addTag({ [type]: name, content });
+    }
   }
 
   isOpen = false;

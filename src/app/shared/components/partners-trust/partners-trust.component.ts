@@ -17,6 +17,31 @@ import { SwiperOptions } from 'swiper/types';
   styleUrl: './partners-trust.component.css'
 })
 export class PartnersTrustComponent implements AfterViewInit {
+  slidesPerView = 3;
+  breakpoints = {
+    300: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    640: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+    },
+    1280: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+    },
+    
+    
+  };
   slides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4', 'Slide 5', 'Slide 6'];
   slido = {
     title: ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4', 'Slide 5', 'Slide 6'],
