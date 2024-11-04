@@ -17,6 +17,10 @@ export default class MoldMakingComponent implements OnInit {
   constructor(private meta: Meta, private titleService: Title, protected vars: GlobalVars) { }
 
   ngOnInit(): void {
+    this.setMetaTags();
+  }
+
+  private setMetaTags() {
     this.titleService.setTitle('Mold Making Services - Rotomold Mexico');
 
     // Standard Meta Tags
@@ -26,21 +30,21 @@ export default class MoldMakingComponent implements OnInit {
     // Open Graph Meta Tags
     this.addMetaTag('og:title', 'Mold Making Services - Rotomold Mexico', 'property');
     this.addMetaTag('og:description', 'Explore our specialized mold making services at Rotomold Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.', 'property');
-    this.addMetaTag('og:image', '/assets/moldMakingImage.png', 'property'); // Update with the correct image path
+    this.addMetaTag('og:image', '/assets/moldMakingImage.png', 'property');
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
     this.addMetaTag('twitter:title', 'Mold Making Services - Rotomold Mexico');
     this.addMetaTag('twitter:description', 'Explore our specialized mold making services at Rotomold Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.');
-    this.addMetaTag('twitter:image', '/assets/moldMakingImage.png'); // Update with the correct image path
+    this.addMetaTag('twitter:image', '/assets/moldMakingImage.png');
 
     // Robots Meta Tag
     this.addMetaTag('robots', 'index, follow');
   }
 
   private addMetaTag(name: string, content: string, type: string = 'name') {
-    if (!this.meta.getTag(`${type}='${name}'`)) {
-      this.meta.addTag({ [type]: name, content });
-    }
+    // Remove existing tag if present
+    this.meta.removeTag(`${type}='${name}'`);
+    this.meta.addTag({ [type]: name, content });
   }
 }

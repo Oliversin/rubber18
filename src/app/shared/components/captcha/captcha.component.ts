@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
-import { RecaptchaModule, ReCaptchaV3Service } from 'ng-recaptcha-2';
+import { RecaptchaModule } from 'ng-recaptcha-2';
 
 
 @Component({

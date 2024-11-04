@@ -16,6 +16,10 @@ export default class EngineersComponent implements OnInit {
   constructor(private meta: Meta, private titleService: Title, protected vars: GlobalVars) { }
 
   ngOnInit(): void {
+    this.setMetaTags();
+  }
+
+  private setMetaTags() {
     this.titleService.setTitle('Our Engineers - Rotomold Mexico');
 
     // Standard Meta Tags
@@ -38,8 +42,8 @@ export default class EngineersComponent implements OnInit {
   }
 
   private addMetaTag(name: string, content: string, type: string = 'name') {
-    if (!this.meta.getTag(`${type}='${name}'`)) {
-      this.meta.addTag({ [type]: name, content });
-    }
+    // Remove existing tag if present
+    this.meta.removeTag(`${type}='${name}'`);
+    this.meta.addTag({ [type]: name, content });
   }
 }

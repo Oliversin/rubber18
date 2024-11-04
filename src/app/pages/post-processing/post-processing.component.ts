@@ -16,6 +16,10 @@ export default class PostProcessingComponent implements OnInit {
   constructor(private meta: Meta, private titleService: Title, protected vars: GlobalVars) { }
 
   ngOnInit(): void {
+    this.setMetaTags();
+  }
+
+  private setMetaTags() {
     this.titleService.setTitle('Post Processing Services - Rotomold Mexico');
 
     // Standard Meta Tags
@@ -25,21 +29,21 @@ export default class PostProcessingComponent implements OnInit {
     // Open Graph Meta Tags
     this.addMetaTag('og:title', 'Post Processing Services - Rotomold Mexico', 'property');
     this.addMetaTag('og:description', 'Enhance your products with our comprehensive post processing services at Rotomold Mexico. We specialize in finishing and assembly to meet your specific needs.', 'property');
-    this.addMetaTag('og:image', '/assets/postProcessingImage.png', 'property'); // Update with the correct image path
+    this.addMetaTag('og:image', '/assets/postProcessingImage.png', 'property');
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
     this.addMetaTag('twitter:title', 'Post Processing Services - Rotomold Mexico');
     this.addMetaTag('twitter:description', 'Enhance your products with our comprehensive post processing services at Rotomold Mexico. We specialize in finishing and assembly to meet your specific needs.');
-    this.addMetaTag('twitter:image', '/assets/postProcessingImage.png'); // Update with the correct image path
+    this.addMetaTag('twitter:image', '/assets/postProcessingImage.png');
 
     // Robots Meta Tag
     this.addMetaTag('robots', 'index, follow');
   }
 
   private addMetaTag(name: string, content: string, type: string = 'name') {
-    if (!this.meta.getTag(`${type}='${name}'`)) {
-      this.meta.addTag({ [type]: name, content });
-    }
+    // Remove existing tag if present
+    this.meta.removeTag(`${type}='${name}'`);
+    this.meta.addTag({ [type]: name, content });
   }
 }

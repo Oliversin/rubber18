@@ -5,3 +5,6 @@
 small {
     color : red;
   }
+.grecaptcha-badge { 
+    visibility: hidden;
+}

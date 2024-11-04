@@ -8,3 +8,7 @@
     font-size: 0.875rem; /* Smaller font size for error messages */
     margin-top: 0.25rem; /* Spacing above the error message */
   }
+
+  .grecaptcha-badge { 
+    visibility: hidden !important;
+}

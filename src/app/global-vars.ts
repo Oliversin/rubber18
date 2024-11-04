@@ -7,6 +7,7 @@ export class GlobalVars {
     phone = "+1.909.232.8934";
     phoneCayman = "+1.936.235.2011";
     email = "sales@rotomoldmexico.com";
+    emailDev = "oliver@rotomoldmexico.com";
     address1 = "Paseo, Bahía Todos Santos 322, Ex-Ejido Chapultepec, 22785 Ensenada, B.C., Mexico";
     address2 = "15461 Slover Ave, Fontana, CA 92337, United States";
     engineers = "20";

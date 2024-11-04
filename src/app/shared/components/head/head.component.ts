@@ -13,7 +13,7 @@ export class HeadComponent {
   isMenuHidden = true;
 
   navItems = [
-    { label: 'Home', link: '/home' },
+    { label: 'Home', link: '/' },
     { label: 'Services', link: '/services' },
     { label: 'About', link: '/about' },
     { label: 'FAQ', link: '/faq' },

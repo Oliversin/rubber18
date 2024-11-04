@@ -55,6 +55,14 @@ export const routes: Routes = [
                 path: 'engineers',
                 loadComponent: () => import('./pages/engineers/engineers.component')
             },
+            {
+                path: 'privacy-policy',
+                loadComponent: () => import('./pages/privacy-policy/privacy-policy.component')
+            },
+            {
+                path: 'terms-condition',
+                loadComponent: () => import('./pages/terms-condition/terms-condition.component')
+            },
         ]
     },
     {

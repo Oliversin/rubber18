@@ -16,6 +16,10 @@ export default class ShippingComponent implements OnInit {
   constructor(private meta: Meta, private titleService: Title, protected vars: GlobalVars) { }
 
   ngOnInit(): void {
+    this.setMetaTags();
+  }
+
+  private setMetaTags() {
     this.titleService.setTitle('Shipping Services - Rotomold Mexico');
 
     // Standard Meta Tags
@@ -25,21 +29,21 @@ export default class ShippingComponent implements OnInit {
     // Open Graph Meta Tags
     this.addMetaTag('og:title', 'Shipping Services - Rotomold Mexico', 'property');
     this.addMetaTag('og:description', 'Reliable and efficient shipping services at Rotomold Mexico. We ensure timely delivery of your products with our comprehensive logistics solutions.', 'property');
-    this.addMetaTag('og:image', '/assets/shippingImage.png', 'property'); // Update with the correct image path
+    this.addMetaTag('og:image', '/assets/shippingImage.png', 'property');
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
     this.addMetaTag('twitter:title', 'Shipping Services - Rotomold Mexico');
     this.addMetaTag('twitter:description', 'Reliable and efficient shipping services at Rotomold Mexico. We ensure timely delivery of your products with our comprehensive logistics solutions.');
-    this.addMetaTag('twitter:image', '/assets/shippingImage.png'); // Update with the correct image path
+    this.addMetaTag('twitter:image', '/assets/shippingImage.png');
 
     // Robots Meta Tag
     this.addMetaTag('robots', 'index, follow');
   }
 
   private addMetaTag(name: string, content: string, type: string = 'name') {
-    if (!this.meta.getTag(`${type}='${name}'`)) {
-      this.meta.addTag({ [type]: name, content });
-    }
+    // Remove existing tag if present
+    this.meta.removeTag(`${type}='${name}'`);
+    this.meta.addTag({ [type]: name, content });
   }
 }
