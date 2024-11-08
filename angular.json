@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rotomold18": {
+    "rubber18": {
       
       "projectType": "application",
       "schematics": {},
@@ -15,7 +15,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             
-            "outputPath": "dist/rotomold18",
+            "outputPath": "dist/rubber18",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "rotomold18:build:production"
+              "buildTarget": "rubber18:build:production"
             },
             "development": {
-              "buildTarget": "rotomold18:build:development"
+              "buildTarget": "rubber18:build:development"
             }
           },
           "defaultConfiguration": "development"
