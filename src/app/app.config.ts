@@ -6,6 +6,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {provideRouter, withInMemoryScrolling, withViewTransitions} from '@angular/router';
 import { routes } from './app.routes';
 import { RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha-2';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,6 +28,7 @@ export const appConfig: ApplicationConfig = {
 
     
   ),
+  {provide:LocationStrategy,useClass:HashLocationStrategy}
   ]
 };
 
