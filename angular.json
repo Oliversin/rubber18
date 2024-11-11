@@ -38,6 +38,9 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "outputPath": "dist/rubber18",
+              "baseHref": "/rubber18/",
               "budgets": [
                 {
                   "type": "initial",
@@ -99,6 +102,7 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy"
+
         }
       }
     }
