@@ -1,9 +1,9 @@
 .announcement-bar {
     background: linear-gradient(
       152deg,
-      rgb(20, 143, 180) 25%,
-      rgba(20, 84, 87, 1) 51%,
-      rgba(20, 143, 180) 80%
+      rgb(208, 211, 50) 25%,
+      rgb(67, 87, 20) 51%,
+      rgb(195, 226, 57) 80%
     );
     background-size: 200% 200%;
     animation: looper 5s linear infinite;
