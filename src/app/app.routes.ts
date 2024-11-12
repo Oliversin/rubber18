@@ -37,16 +37,28 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/shipping/shipping.component')
             },
             {
-                path: 'services/mold-making',
-                loadComponent: () => import('./pages/mold-making/mold-making.component')
-            },
-            {
                 path: 'services/post-processing',
                 loadComponent: () => import('./pages/post-processing/post-processing.component')
             },
             {
                 path: 'services/foam-insulation',
                 loadComponent: () => import('./pages/foam-insulation/foam-insulation.component')
+            },
+            {
+                path: 'services/rubber-extrusion',
+                loadComponent: () => import('./pages/rubber-extrusion/rubber-extrusion.component')
+            },
+            {
+                path: 'services/compounding',
+                loadComponent: () => import('./pages/compounding/compounding.component')
+            },
+            {
+                path: 'services/silicone-hose-wrapping',
+                loadComponent: () => import('./pages/silicone-hose-wrapping/silicone-hose-wrapping.component')
+            },
+            {
+                path: 'services/rubber-molding',
+                loadComponent: () => import('./pages/rubber-molding/rubber-molding.component')
             },
             {
                 path: 'services/other-services',
@@ -64,6 +76,7 @@ export const routes: Routes = [
                 path: 'terms-condition',
                 loadComponent: () => import('./pages/terms-condition/terms-condition.component')
             },
+
         ]
     },
     {
