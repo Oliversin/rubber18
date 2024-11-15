@@ -20,21 +20,21 @@ export default class OtherServicesComponent {
   }
 
   private setMetaTags() {
-    this.titleService.setTitle('Mold Making Services - Rotomold Mexico');
+    this.titleService.setTitle('Mold Making Services - Rubber-Mexico');
 
     // Standard Meta Tags
-    this.addMetaTag('description', 'Explore our specialized mold making services at Rotomold Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.');
-    this.addMetaTag('keywords', 'Mold Making, Rotational Molding, Custom Molds, Rotomold Mexico, Quality Manufacturing, Plastic Molding');
+    this.addMetaTag('description', 'Explore our specialized mold making services at Rubber-Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.');
+    this.addMetaTag('keywords', 'Mold Making, Rotational Molding, Custom Molds, Rubber-Mexico, Quality Manufacturing, Plastic Molding');
 
     // Open Graph Meta Tags
-    this.addMetaTag('og:title', 'Mold Making Services - Rotomold Mexico', 'property');
-    this.addMetaTag('og:description', 'Explore our specialized mold making services at Rotomold Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.', 'property');
+    this.addMetaTag('og:title', 'Mold Making Services - Rubber-Mexico', 'property');
+    this.addMetaTag('og:description', 'Explore our specialized mold making services at Rubber-Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.', 'property');
     this.addMetaTag('og:image', '/assets/moldMakingImage.png', 'property');
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
-    this.addMetaTag('twitter:title', 'Mold Making Services - Rotomold Mexico');
-    this.addMetaTag('twitter:description', 'Explore our specialized mold making services at Rotomold Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.');
+    this.addMetaTag('twitter:title', 'Mold Making Services - Rubber-Mexico');
+    this.addMetaTag('twitter:description', 'Explore our specialized mold making services at Rubber-Mexico. With over 50 years of experience, we provide high-quality, custom molds for all your rotational molding needs.');
     this.addMetaTag('twitter:image', '/assets/moldMakingImage.png');
 
     // Robots Meta Tag

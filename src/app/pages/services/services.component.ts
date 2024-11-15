@@ -21,21 +21,21 @@ export default class ServicesComponent implements OnInit{
   }
 
   private setMetaTags() {
-    this.titleService.setTitle('Our Services - Rotomold Mexico');
+    this.titleService.setTitle('Our Services - Rubber-Mexico');
 
     // Standard Meta Tags
-    this.addMetaTag('description', 'Discover the comprehensive range of services at Rotomold Mexico, including rotational molding, mold making, post processing, foam insulation, and shipping. Tailored solutions for all your manufacturing needs.');
-    this.addMetaTag('keywords', 'Services, Rotomold Mexico, Rotational Molding, Mold Making, Post Processing, Foam Insulation, Shipping, Custom Solutions');
+    this.addMetaTag('description', 'Discover the comprehensive range of services at Rubber-Mexico, including rotational molding, mold making, post processing, foam insulation, and shipping. Tailored solutions for all your manufacturing needs.');
+    this.addMetaTag('keywords', 'Services, Rubber-Mexico, Rotational Molding, Mold Making, Post Processing, Foam Insulation, Shipping, Custom Solutions');
 
     // Open Graph Meta Tags
-    this.addMetaTag('og:title', 'Our Services - Rotomold Mexico', 'property');
-    this.addMetaTag('og:description', 'Discover the comprehensive range of services at Rotomold Mexico, including rotational molding, mold making, post processing, foam insulation, and shipping. Tailored solutions for all your manufacturing needs.', 'property');
+    this.addMetaTag('og:title', 'Our Services - Rubber-Mexico', 'property');
+    this.addMetaTag('og:description', 'Discover the comprehensive range of services at Rubber-Mexico, including rotational molding, mold making, post processing, foam insulation, and shipping. Tailored solutions for all your manufacturing needs.', 'property');
     this.addMetaTag('og:image', '/assets/servicesImage.png', 'property');
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
-    this.addMetaTag('twitter:title', 'Our Services - Rotomold Mexico');
-    this.addMetaTag('twitter:description', 'Discover the comprehensive range of services at Rotomold Mexico, including rotational molding, mold making, post processing, foam insulation, and shipping. Tailored solutions for all your manufacturing needs.');
+    this.addMetaTag('twitter:title', 'Our Services - Rubber-Mexico');
+    this.addMetaTag('twitter:description', 'Discover the comprehensive range of services at Rubber-Mexico, including rotational molding, mold making, post processing, foam insulation, and shipping. Tailored solutions for all your manufacturing needs.');
     this.addMetaTag('twitter:image', '/assets/servicesImage.png');
 
     // Robots Meta Tag

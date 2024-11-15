@@ -72,21 +72,21 @@ export default class FaqComponent implements OnInit{
    }
 
    ngOnInit(): void {
-    this.titleService.setTitle('Frequently Asked Questions - Rotomold Mexico');
+    this.titleService.setTitle('Frequently Asked Questions - Rubber-Mexico');
 
     // Standard Meta Tags
-    this.addMetaTag('description', 'Find answers to the most frequently asked questions about Rotomold Mexico and our services. Get the information you need to make informed decisions.');
-    this.addMetaTag('keywords', 'FAQ, Frequently Asked Questions, Rotomold Mexico, Customer Support, Rotational Molding');
+    this.addMetaTag('description', 'Find answers to the most frequently asked questions about Rubber-Mexico and our services. Get the information you need to make informed decisions.');
+    this.addMetaTag('keywords', 'FAQ, Frequently Asked Questions, Rubber-Mexico, Customer Support, Rotational Molding');
 
     // Open Graph Meta Tags
-    this.addMetaTag('og:title', 'Frequently Asked Questions - Rotomold Mexico', 'property');
-    this.addMetaTag('og:description', 'Find answers to the most frequently asked questions about Rotomold Mexico and our services. Get the information you need to make informed decisions.', 'property');
+    this.addMetaTag('og:title', 'Frequently Asked Questions - Rubber-Mexico', 'property');
+    this.addMetaTag('og:description', 'Find answers to the most frequently asked questions about Rubber-Mexico and our services. Get the information you need to make informed decisions.', 'property');
     this.addMetaTag('og:image', '/assets/faqImage.png', 'property'); // Update with the correct image path
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
-    this.addMetaTag('twitter:title', 'Frequently Asked Questions - Rotomold Mexico');
-    this.addMetaTag('twitter:description', 'Find answers to the most frequently asked questions about Rotomold Mexico and our services. Get the information you need to make informed decisions.');
+    this.addMetaTag('twitter:title', 'Frequently Asked Questions - Rubber-Mexico');
+    this.addMetaTag('twitter:description', 'Find answers to the most frequently asked questions about Rubber-Mexico and our services. Get the information you need to make informed decisions.');
     this.addMetaTag('twitter:image', '/assets/faqImage.png'); // Update with the correct image path
 
     // Robots Meta Tag

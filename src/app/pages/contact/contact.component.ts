@@ -47,21 +47,21 @@ export default class ContactComponent implements OnInit{
 
   ngOnInit(): void {
     
-    this.titleService.setTitle('Contact Us - Rotomold Mexico');
+    this.titleService.setTitle('Contact Us - Rubber-Mexico');
 
     // Standard Meta Tags
-    this.addMetaTag('description', 'Don’t hesitate to reach out! Whether you prefer email or a phone call, we at RotomoldMexico are here to turn your ideas into reality. Request a quote today, and let’s bring your vision to life!');
-    this.addMetaTag('keywords', 'Contact, Rotomold Mexico, Customer Service, Inquiries, Support');
+    this.addMetaTag('description', 'Don’t hesitate to reach out! Whether you prefer email or a phone call, we at Rubber-Mexico are here to turn your ideas into reality. Request a quote today, and let’s bring your vision to life!');
+    this.addMetaTag('keywords', 'Contact, Rubber-Mexico, Customer Service, Inquiries, Support');
 
     // Open Graph Meta Tags
-    this.addMetaTag('og:title', 'Contact Us - Rotomold Mexico', 'property');
-    this.addMetaTag('og:description', 'Don’t hesitate to reach out! Whether you prefer email or a phone call, we at RotomoldMexico are here to turn your ideas into reality. Request a quote today, and let’s bring your vision to life!', 'property');
+    this.addMetaTag('og:title', 'Contact Us - Rubber-Mexico', 'property');
+    this.addMetaTag('og:description', 'Don’t hesitate to reach out! Whether you prefer email or a phone call, we at Rubber-Mexico are here to turn your ideas into reality. Request a quote today, and let’s bring your vision to life!', 'property');
     this.addMetaTag('og:image', '/assets/contactImage.png', 'property'); // Update with the correct image path
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
-    this.addMetaTag('twitter:title', 'Contact Us - Rotomold Mexico');
-    this.addMetaTag('twitter:description', 'Don’t hesitate to reach out! Whether you prefer email or a phone call, we at RotomoldMexico are here to turn your ideas into reality. Request a quote today, and let’s bring your vision to life!');
+    this.addMetaTag('twitter:title', 'Contact Us - Rubber-Mexico');
+    this.addMetaTag('twitter:description', 'Don’t hesitate to reach out! Whether you prefer email or a phone call, we at Rubber-Mexico are here to turn your ideas into reality. Request a quote today, and let’s bring your vision to life!');
     this.addMetaTag('twitter:image', '/assets/contactImage.png'); // Update with the correct image path
 
     // Robots Meta Tag

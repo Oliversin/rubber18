@@ -20,21 +20,21 @@ export default class EngineersComponent implements OnInit {
   }
 
   private setMetaTags() {
-    this.titleService.setTitle('Our Engineers - Rotomold Mexico');
+    this.titleService.setTitle('Our Engineers - Rubber-Mexico');
 
     // Standard Meta Tags
-    this.addMetaTag('description', 'Meet the talented engineering team at Rotomold Mexico. With decades of experience in rotational molding, we deliver innovative solutions tailored to your needs.');
-    this.addMetaTag('keywords', 'Engineers, Rotomold Mexico, Engineering Team, Rotational Molding, Custom Solutions');
+    this.addMetaTag('description', 'Meet the talented engineering team at Rubber-Mexico. With decades of experience in rotational molding, we deliver innovative solutions tailored to your needs.');
+    this.addMetaTag('keywords', 'Engineers, Rubber-Mexico, Engineering Team, Rubber Molding, Rotational Molding, Custom Solutions');
 
     // Open Graph Meta Tags
-    this.addMetaTag('og:title', 'Our Engineers - Rotomold Mexico', 'property');
-    this.addMetaTag('og:description', 'Meet the talented engineering team at Rotomold Mexico. With decades of experience in rotational molding, we deliver innovative solutions tailored to your needs.', 'property');
+    this.addMetaTag('og:title', 'Our Engineers - Rubber-Mexico', 'property');
+    this.addMetaTag('og:description', 'Meet the talented engineering team at Rubber-Mexico. With decades of experience in rotational molding, we deliver innovative solutions tailored to your needs.', 'property');
     this.addMetaTag('og:image', '/assets/engineersImage.png', 'property'); // Update with the correct image path
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
-    this.addMetaTag('twitter:title', 'Our Engineers - Rotomold Mexico');
-    this.addMetaTag('twitter:description', 'Meet the talented engineering team at Rotomold Mexico. With decades of experience in rotational molding, we deliver innovative solutions tailored to your needs.');
+    this.addMetaTag('twitter:title', 'Our Engineers - Rubber-Mexico');
+    this.addMetaTag('twitter:description', 'Meet the talented engineering team at Rubber-Mexico. With decades of experience in rotational molding, we deliver innovative solutions tailored to your needs.');
     this.addMetaTag('twitter:image', '/assets/engineersImage.png'); // Update with the correct image path
 
     // Robots Meta Tag
