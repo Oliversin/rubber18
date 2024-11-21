@@ -30,13 +30,14 @@ jobs:
             ${{ runner.os }}-node-modules-
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # This will use the package-lock.json for a faster and cleaner install
+
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli  # Install Angular CLI globally
 
       - name: Build Angular project
-        run: ng build --configuration production
+        run: ng build --configuration production --base-href /rubber18/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
