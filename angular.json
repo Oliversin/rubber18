@@ -39,7 +39,7 @@
           "configurations": {
             "production": {
               "optimization": true,
-              "outputPath": "dist/rubber18/browser",
+              "outputPath": "dist/rubber18",
               "baseHref": "/rubber18/",
               "budgets": [
                 {
