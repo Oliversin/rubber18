@@ -6,6 +6,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {provideRouter, withInMemoryScrolling, withViewTransitions} from '@angular/router';
 import { routes } from './app.routes';
 import { RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha-2';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -23,10 +25,8 @@ export const appConfig: ApplicationConfig = {
       anchorScrolling: 'enabled',
       scrollPositionRestoration: "top",
     }),
-
-
-    
-  )
+  ),
+  {provide:LocationStrategy,useClass:HashLocationStrategy}
   ]
 };
 
