@@ -1,0 +1,30 @@
+<section>
+    <div class="w-full mt-1 mb-20 max-w-7xl mx-auto">
+    <!-- Tab Buttons -->
+        <div class="bg-blue-500 p-2 rounded-t-lg">
+            <div class="flex justify-center space-x-4">
+                
+                    @for(tab of tabs;track tab; let i = $index){
+                        <button 
+                        class="px-4 py-2 text-white font-semibold border-b-4 border-blue-700 hover:bg-blue-700 focus:outline-none tab-button"
+                        [class.active]="activeTab === i"
+                        (click)="showTab(i)">
+                        {{ tab.label }}
+                    </button>
+                    }
+                
+                
+            </div>
+        </div>
+    
+        <!-- Tab Content -->
+        @for(tab of tabs;track tab; let i = $index){
+            <div  
+                [ngClass]="{'hidden': activeTab !== i}" 
+                class="p-4 tab-content bg-white shadow-md rounded-lg">
+                <h2 class="text-2xl font-semibold mb-2 text-blue-700">{{ tab.label }} </h2>
+                <div [innerHTML]="tab.content"></div>
+            </div>
+        }
+  </div>
+</section>

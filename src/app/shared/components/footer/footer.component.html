@@ -3,12 +3,12 @@
     <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
-        <img src="assets/logoHeader.png" class="mr-5 md:h-14 sm:h-9" alt="logo" />
+        <img src="{{vars.logoImage}}" class="mr-5 md:h-8 sm:h-9" alt="logo" />
           <p class="max-w-xs mt-4 text-sm text-white">
             <span class="block my-2"><a href="tel:{{vars.phone}}"> <strong>Phone:</strong> {{vars.phoneCayman}} / {{vars.phone}}</a></span>
             <span class="block my-2"><a href="mailto:{{vars.email}}"> <strong>Email:</strong> {{vars.email}}</a></span>
-            <span class="block my-2"><a routerLink="/about" fragment="contactUs"> Paseo, Bahía Todos Santos 322, Ex-Ejido Chapultepec, 22785 Ensenada, B.C., Mexico</a></span>
-            <span class="block my-2">15461 Slover Ave, Fontana, CA 92337, United States</span>
+            <span class="block my-2"><a routerLink="/about" fragment="contactUs"> {{vars.address1}}</a></span>
+            <span class="block my-2"> {{vars.address2}}</span>
           </p>
           <div class="flex mt-8 space-x-6 text-white">
             <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
@@ -58,12 +58,9 @@
               Services
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
-              <a class="hover:opacity-75" routerLink="/services/rotational-molding"> Rotational Molding</a>
-              <a class="hover:opacity-75" routerLink="/services/mold-making"> Mold Making </a>
-              <a class="hover:opacity-75" routerLink="/services/post-processing"> Post Processing </a>
-              <a class="hover:opacity-75" routerLink="/services/foam-insulation"> Foam Insulation </a>
-              <a class="hover:opacity-75" routerLink="/services/shipping"> Shipping & Stocking </a>
-              <a class="hover:opacity-75" routerLink="/services/other-services"> Others </a>
+              @for (service of vars.services; track $index) {
+                <a class="hover:opacity-75" routerLink="{{service.link}}"> {{service.label}}</a>
+              }
             </nav>
           </div>
           <div class="text-white">

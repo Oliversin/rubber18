@@ -3,10 +3,15 @@ import { RouterLink } from '@angular/router';
 import { BackToServicesComponent } from "../../shared/back-to-services/back-to-services.component";
 import { Meta, Title } from '@angular/platform-browser';
 import { GlobalVars } from '../../global-vars';
+import { PartnersTrustComponent } from "../../shared/components/partners-trust/partners-trust.component";
+import { SwiperinoSliderComponent } from "../../shared/components/swiperino-slider/swiperino-slider.component";
+import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
+import { HorizontalCardComponent } from '../../shared/components/horizontal-card/horizontal-card.component';
+
 @Component({
   selector: 'app-rubber-molding',
   standalone: true,
-  imports: [RouterLink, BackToServicesComponent],
+  imports: [RouterLink, BackToServicesComponent, PartnersTrustComponent, SwiperinoSliderComponent,ProductCardComponent,HorizontalCardComponent],
   providers:[GlobalVars],
   templateUrl: './rubber-molding.component.html',
   styleUrl: './rubber-molding.component.css'
@@ -29,13 +34,13 @@ export default class RubberMoldingComponent implements OnInit {
     // Open Graph Meta Tags
     this.addMetaTag('og:title', 'Rubber Molding Services - Rubber-Mexico', 'property');
     this.addMetaTag('og:description', 'Rubber-Mexico offers precision rubber molding services, producing high-quality molded rubber parts for industries like automotive, medical, and manufacturing. We specialize in custom molding solutions, ensuring durability, performance, and exact specifications for every project.', 'property');
-    this.addMetaTag('og:image', '/assets/shippingImage.png', 'property');
+    this.addMetaTag('og:image', '/assets/services/rubberMoldingv2.png', 'property');
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
     this.addMetaTag('twitter:title', 'Rubber Molding Services - Rubber-Mexico');
     this.addMetaTag('twitter:description', 'Rubber-Mexico offers precision rubber molding services, producing high-quality molded rubber parts for industries like automotive, medical, and manufacturing. We specialize in custom molding solutions, ensuring durability, performance, and exact specifications for every project.');
-    this.addMetaTag('twitter:image', '/assets/shippingImage.png');
+    this.addMetaTag('twitter:image', '/assets/services/rubberMoldingv2.png');
 
     // Robots Meta Tag
     this.addMetaTag('robots', 'index, follow');

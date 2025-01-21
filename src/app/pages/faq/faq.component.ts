@@ -24,10 +24,7 @@ export default class FaqComponent implements OnInit{
   
   constructor(private meta: Meta, private titleService: Title, public vars:GlobalVars) {
     this.faqs = [
-      { question: 'What Rotomolding Manufacturing Processes do you have?', 
-        isActive: true,
-        answer: 'We have over '+this.vars.ourSize+' of manufacturing space in Baja California, Mexico with many capabilities. We have '+this.vars.rotomoldingMachines+' that vary from 1.9 meter oven diamaters to 4.5 meteres.' 
-      },
+
       { question: 'What is the minimum order amount?', 
         isActive: false,
         answer: 'We are setup to service every project from one off projects to full scale production!' 
@@ -35,7 +32,7 @@ export default class FaqComponent implements OnInit{
       },
       { question: 'Which countries do you ship to?', 
         isActive: false,
-        answer: 'We have trucks crossing into the USA every single day with warehouses on the West Coast, East Coast, and even in Canada! We are located within a few miles of the port of Ensenada and within a few hours from the Port of Long Beach and can ship product worldwide.' 
+        answer: 'We have trucks crossing into the USA every single day with warehouses on the West Coast, East Coast, and even in Mexico! We are located within a few miles of the port of Ensenada and within a few hours from the Port of Long Beach and can ship product worldwide.' 
   
       },
       { question: 'Are you ISO 9001 certified?', 
@@ -45,12 +42,7 @@ export default class FaqComponent implements OnInit{
       },
       { question: 'What’s the biggest part you can run?', 
         isActive: false,
-        answer: '12 long part. But depending on the project, different machines and arms can be used to accommodate your needs' 
-  
-      },
-      { question: 'Are molds stored inside or outside?', 
-        isActive: false,
-        answer: 'Molds are stored inside and away from harsh weather' 
+        answer: 'our largest press is 800T and can mold parts up to 102" x 72" ' 
   
       },
       { question: 'Do you require MOQs?', 
@@ -61,11 +53,6 @@ export default class FaqComponent implements OnInit{
       { question: 'Can you make coolers?', 
         isActive: false,
         answer: 'Unfortunately at this time we are not in the market to manufacture coolers' 
-  
-      },
-      { question: 'Can you do full assemblies?', 
-        isActive: false,
-        answer: 'Assemblies will be considered depending on the customer and its requirements, but not something we specialize in.' 
   
       },
     ];

@@ -1,0 +1,21 @@
+
+<swiper-container class="swiper-container mb-6"  
+    autoplay="true"
+    navigation="true"
+    
+    speed="500" 
+    pagination="true" 
+    [loop]="images.length > slidesPerView"
+    effect="coverflow"
+    grab-cursor="true"
+    centered-slide="true"
+    [breakpoints]="breakpoints"
+    
+>
+    @for (image of images; track image) {
+    <swiper-slide class="mb-6" >
+        <img loading="lazy" [src]="image" alt="" width="600" height="500">
+    </swiper-slide>
+    }
+    
+</swiper-container>

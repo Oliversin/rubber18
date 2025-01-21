@@ -24,6 +24,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/robots.txt",
+              "src/favicon.ico",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -38,19 +40,16 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
-              "outputPath": "dist/rubber18",
-              "baseHref": "/rubber18/",
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "4MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "200kB",
+                  "maximumError": "400kB"
                 }
               ],
               "outputHashing": "all"
@@ -99,10 +98,6 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
-
         }
       }
     }

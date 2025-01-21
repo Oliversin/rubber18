@@ -1,0 +1,44 @@
+<nav class="bg-[#006488] border border-black dark:border-gray-700 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+      <a href="/" class="flex items-center">
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+          <img src="{{vars.logoImage}}" alt="logo" class="mr-5 md:h-6 sm:h-9 h-auto max-w-full">
+        </span>
+      </a>
+  
+      <div class="flex items-center">
+        <button
+          (click)="toggleMenu()"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+  
+      <div  class="w-full md:block md:w-auto">
+        <ul [ngClass]="{'hidden': isMenuHidden, 'flex': !isMenuHidden}" class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:flex md:visible">
+          @for (item of navItems; track item.link){
+            <li >
+              <a
+                [routerLink]="item.link"
+                routerLinkActive="block py-2 pr-4 bg-[#ffcb67] rounded md:bg-transparent md:text-[#ffcb67] md:p-0 dark:text-white"
+                class="text-white  hover:bg-[#ffcb67] md:hover:bg-transparent md:border-0 md:hover:text-[#ffcb67] md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+              >
+                {{ item.label }}
+              </a>
+            </li>  
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

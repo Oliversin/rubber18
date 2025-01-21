@@ -17,20 +17,20 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/about/about.component')
             },
             {
-                path: 'faq',
-                loadComponent: () => import('./pages/faq/faq.component')
-            },
-            {
                 path: 'contact',
                 loadComponent: () => import('./pages/contact/contact.component')
             },
             {
-                path: 'services',
-                loadComponent: () => import('./pages/services/services.component')
+                path: 'faq',
+                loadComponent: () => import('./pages/faq/faq.component')
             },
             {
-                path: 'services/rotational-molding',
-                loadComponent: () => import('./pages/rotational-molding/rotational-molding.component')
+                path: 'quality',
+                loadComponent: () => import('./pages/quality/quality.component')
+            },
+            {
+                path: 'services',
+                loadComponent: () => import('./pages/services/services.component')
             },
             {
                 path: 'services/shipping',
@@ -53,7 +53,11 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/compounding/compounding.component')
             },
             {
-                path: 'services/silicone-hose-wrapping',
+                path: 'services/calendering',
+                loadComponent: () => import('./pages/rubber-calendering/rubber-calendering.component')
+            },
+            {
+                path: 'services/mandrel-formed-hoses',
                 loadComponent: () => import('./pages/silicone-hose-wrapping/silicone-hose-wrapping.component')
             },
             {
@@ -61,8 +65,12 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/rubber-molding/rubber-molding.component')
             },
             {
-                path: 'services/other-services',
-                loadComponent: () => import('./pages/other-services/other-services.component')
+                path: 'services/rubber-molding/more-processes',
+                loadComponent: () => import('./pages/more-molding-processes/more-molding-processes.component')
+            },
+            {
+                path: 'services/rubber-molding/mold-making',
+                loadComponent: () => import('./pages/mold-making/mold-making.component')
             },
             {
                 path: 'engineers',
@@ -79,8 +87,10 @@ export const routes: Routes = [
 
         ]
     },
+    /*
     {
         path: '**',
         redirectTo: '',
     },
+    */
 ];

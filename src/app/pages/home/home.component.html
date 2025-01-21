@@ -2,30 +2,29 @@
   <div class="announcement-container text-white grid md:grid-cols-3 grid-cols-1">
     
     <div class="announcement-item ">
-      <a href="emailto:sales2@rubber-mexico.com" class="block py-2 px-6 text-center">
-        <div class="">
+      <a href="mailto:sales2@rubber-mexico.com" class="block py-2 px-6 text-center">
+        <div class="capitalize">
           <b>Email Us Today!</b>
-          <p class=" italic">
-            <span class="underline">sales2&#64;rubber-mexico.com</span>
+          <p class=" italic font-semibold">
+            <span class="underline">{{vars.email}}</span>
           </p>
         </div>
       </a>
     </div>
-    <div class="announcement-item  ">
-      <a routerLink="/contact" class="block py-2 px-6 text-center">
-        <div class="">
-          <b>Request A Quote Now</b>
-          <p class="italic">
-            <span class="underline">Clicking here</span>
+    <div class="announcement-item">
+      <a routerLink="/contact" class="block py-2 px-6 text-center ">
+        <div class="capitalize">
+          <p class=" font-semibold inline-flex items-center">
+            <span class="bg-yellow-300 text-gray-900 hover:bg-[#37bef0] py-2 px-4 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Request A Quote Now</span>
           </p>
         </div>
       </a>
     </div>
     <div class="announcement-item ">
       <a href="tel:+19362352011" class="block py-2 px-6 text-center">
-        <div class="">
+        <div class="capitalize">
           <b>Call Us Today!</b>
-          <p class="italic">
+          <p class="italic font-semibold">
             <span class="underline">{{vars.phoneCayman}}</span>
           </p>
         </div>
@@ -50,6 +49,31 @@
       <a routerLink="/services" class="bg-yellow-300 text-gray-900 hover:bg-[#37bef0] py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
     </div>
   </div>
+
+<section>
+  <div class="w-full mx-auto lg:max-w-7xl mt-0 p-6">
+    <div>
+        <h2 class="font-bold text-5xl text-[#007faa] mb-0">
+          Why Rubber-Mexico?
+        </h2>
+        <div class="mt-0 mb-4">
+          <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+          <span class="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
+          <span class="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
+        </div>
+        <p class="text-md font-semibold  text-[#4f7583] lg:text-md dark:text-white">
+          "For over 50 years we have solved the most challenging manufacturing challenges. 
+          With our team of 650+ people including chemists, and engineers we are well prepared to execute well on a wide spectrum of parts. 
+          We are vertically integrated with compounding both organic rubber and silicone in house, and have a wide spectrum of manufacturing capabilities that often complement each other. 
+          We are one of the largest rubber molders in Mexico with experience making a wide array of parts from large floor mats to tiny electrical connector seals. 
+          We are also fully setup for rubber + silicone extrusions. We can extrude customer profiles, foamed/sponge rubber, fabric braided reinforced hoses and much more. 
+          We also make formed fabric reinforced silicone hoses for industrial and automotive applications. 
+          We are experts in making FKM/FVMQ lined silicone hoses for turbo charge and intercooler applications.
+        </p>
+        
+    </div>
+  </div>
+</section>
  
 <section class="px-4 py-5 bg-neutral-100 lg:py-10">
     <div class="grid lg:grid-cols-2 items-center justify-items-center gap-5">
@@ -64,6 +88,60 @@
             <img class="w-full" src="assets/Banner-Mapa-Oliver_800x500px-v3.png" alt="">
         </div>
     </div>
+</section>
+
+<section class="">
+  <div class="grid md:grid-cols-1 grid-cols-1 md:m-8  gap-y-4 pt-4">
+      <app-horizontal-card
+          title="Rubber Molding"
+          learnText="Learn more about our Rubber Molding service"
+          imageUrl="assets/services/rubber-molding/molding-processes/compression-molding/compression-molding-gallery3.png"
+          description="Rubber Molding is an essential phase in manufacturing that enhances the functionality and appearance of products. Our advanced techniques and skilled team ensure that every item receives the attention it needs to meet rigorous quality standards. With a focus on precision and efficiency, we deliver tailored solutions that elevate your final products. Explore how our Rubber Molding capabilities can add value and enhance your production outcomes."
+          link="/services/rubber-molding"
+      />
+
+      <app-horizontal-card
+          title="Mandrel Formed Hoses"
+          learnText="Learn more about our Mandrel Formed Hoses service"
+          imageUrl="/assets/services/siliconeHoseWrapping.png"
+          description="We produce a wide variety of silicone, fluorosilicone & FKM products including straight couplers, hump hoses, reducers, elbows, t hoses, CAC couplers, and coolant hoses. We offer nomex/aramid, polyester and fiberglass reinforcement options depending on your requirements "
+          link="/services/mandrel-formed-hoses"
+      />
+
+      <app-horizontal-card
+          title="Rubber Extrusion"
+          learnText="Learn more about our Rubber Extrusion service"
+          imageUrl="/assets/services/rubberExtrusion.png"
+          description="Rubber extrusion is a manufacturing process in which raw rubber material is forced through a mold (or die) to create continuous shapes with a specific profile. This technique is commonly used to produce rubber seals, gaskets, hoses, tubing, and custom profiles for various industries, including automotive, construction, and medical devices. The extrusion process ensures high precision and consistency, allowing for the creation of complex cross-sectional shapes in various sizes and lengths."
+          link="/services/mandrel-formed-hoses"
+      />
+
+      <app-horizontal-card
+          title="Compounding"
+          learnText="Learn more about our Compounding service"
+          imageUrl="/assets/services/compounding.png"
+          description="Rubber Compounding is the process of mixing raw rubber with various additives to create a custom material with specific properties like strength, flexibility, or heat resistance. By carefully selecting and combining elastomers, curing agents, and fillers, we produce high-performance compounds tailored to meet the unique needs of your application. "
+          link="/services/compounding"
+      />
+
+      <app-horizontal-card
+          title="Calendering"
+          learnText="Learn more about our Calendering service"
+          imageUrl="/assets/services/rubber-calendering.png"
+          description="Rubber Calendering is the process of mixing raw rubber with various additives to create a custom material with specific properties like strength, flexibility, or heat resistance. By carefully selecting and combining elastomers, curing agents, and fillers, we produce high-performance compounds tailored to meet the unique needs of your application. "
+          link="/services/calendering"
+      />
+
+      <app-horizontal-card
+          title="Shipping & Stocking"
+          learnText="Learn more about our Shipping & Stocking service"
+          imageUrl="/assets/services/shippingStocking.png"
+          description="Shipping and stocking are critical aspects of ensuring seamless operations and timely delivery in manufacturing. Our streamlined processes and efficient logistics management guarantee that your products are handled with care and delivered on schedule. With a focus on inventory accuracy and timely dispatch, we ensure your projects remain on track. Explore how our shipping and stocking solutions can enhance your supply chain and support your business needs."
+          link="/services/shipping"
+      />
+
+
+  </div>
 </section>
   
 <section id="new-features" class="py-8 bg-white sm:py-6 lg:py-6">
@@ -83,7 +161,7 @@
           <i class="fa-solid fa-chart-column text-3xl text-gray-900"></i>
         </div>
         <h3 class="mt-12 text-xl font-bold text-gray-900">Manufacturing Excellence</h3>
-        <p class="mt-5 text-base text-gray-600">We have over {{vars.ourSize}} of manufacturing space in Baja California, Mexico with many capabilities. We have  {{vars.rotomoldingMachines}} that vary from 1.9 meter oven diamaters to 4.5 meteres.</p>
+        <p class="mt-5 text-base text-gray-600">We have over {{vars.ourSize}} of manufacturing space in Baja California, Mexico, equipped with diverse capabilities to meet your production needs with precision and efficiency.</p>
       </div>
 
       <!-- Feature 2 -->

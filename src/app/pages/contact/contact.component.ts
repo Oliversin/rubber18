@@ -5,6 +5,7 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { CommonModule, NgClass } from '@angular/common';
 import emailjs from '@emailjs/browser';
 import { CaptchaComponent } from '../../shared/components/captcha/captcha.component';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -34,6 +35,7 @@ export default class ContactComponent implements OnInit{
   get formMessage(){
     return this.contactForm.get('message')
   }
+
   
   constructor(private meta: Meta, private titleService: Title, protected vars:GlobalVars, private builder: FormBuilder) {
     this.contactForm = this.builder.group({
@@ -42,6 +44,9 @@ export default class ContactComponent implements OnInit{
       email: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
       phone: new FormControl('', Validators.required),
       message: new FormControl('', Validators.required),
+
+      ///test
+      ourEmail: new FormControl('sales2@rubber-mexico.com'),
     });
    }
 
@@ -78,7 +83,22 @@ export default class ContactComponent implements OnInit{
     if (this.contactForm.valid && this.captchaComponent.isCaptchaValid()) {
       emailjs.init('R7d_uy4V2Q7hRVp09');
       await emailjs.send("service_4prd4mk", "template_sdsy1qb", this.contactForm.value);
-      alert('Message has been sent');
+      Swal.fire({
+        title: "Thank you!",
+        text:"We’ve received your form submission. Our team will get back to you as soon as possible.",
+        width: 600,
+        icon: "success",
+        timer: 2700,
+        timerProgressBar: true,
+        padding: "3em",
+        color: "#3392b8",
+        backdrop: `
+          rgba(51,146,184,0.4)
+          url("/assets/email-sent2.gif")
+          left top
+          no-repeat
+        `
+      });
       this.contactForm.reset();
       this.captchaComponent.token = null;  // Reset the captcha token
     } else {
@@ -90,5 +110,25 @@ export default class ContactComponent implements OnInit{
     console.warn(this.contactForm.value);
   }
 
+  testModal(){
+    this.contactForm.value;
+    console.log( this.contactForm.value);
+    Swal.fire({
+      title: "Thank you!",
+      text:"We’ve received your form submission. Our team will get back to you as soon as possible.",
+      width: 600,
+      icon: "success",
+      timer: 2700,
+      timerProgressBar: true,
+      padding: "3em",
+      color: "#3392b8",
+      backdrop: `
+        rgba(51,146,184,0.4)
+        url("/assets/email-sent2.gif")
+        left top
+        no-repeat
+      `
+    });
+  }
   
 }

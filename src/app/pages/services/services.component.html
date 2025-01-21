@@ -1,25 +1,41 @@
 <app-card-input
     title="Our services"
-    description="At Rubber-Mexico, we offer high-quality rotomolding services tailored to your needs. Our advanced technology allows us to create durable, lightweight, and custom-designed products for a variety of applications, including tanks, containers, and specialty items. "
+    description="At Rubber-Mexico, we specialize in a wide range of high-quality rubber manufacturing services to meet your specific requirements. Using advanced techniques, we provide precision rubber molding, mandrel-formed hoses, rubber extrusion, calendering, and compounding. Our expert team ensures that each product is crafted to the highest standards of durability, flexibility, and performance, making them ideal for diverse applications across industries."
     imageUrl="assets/services-defaultopt.png"
     buttonText="Get Started"
     buttonLink="/services"
     fragment="servicesText"
     >
 </app-card-input>
-<app-rubber-ad />
+
 <!-- our services section -->
-<section class="py-6" id="services">
+<section class="py-4" id="services">
     <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center" id="servicesText">Core Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <a routerLink="/services/silicone-hose-wrapping">
-                    <img src="assets/services/siliconeHoseWrapping.png" alt="Silicone Hose Wrapping"
+                <a routerLink="/services/rubber-molding">
+                    <img src="assets/services/rubberMoldingv2.png" alt="Rubber Molding Service"
                         class="w-full h-64 object-cover">
                     <div class="p-6 text-center">
-                        <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Silicone Hose Wrapping</h3>
+                        <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Rubber Molding</h3>
+                        <p class="text-gray-700 text-base md:line-clamp-4 line-clamp-3">Rubber Molding is an essential phase in manufacturing that enhances the functionality and appearance of products. 
+                            Our advanced techniques and skilled team ensure that every item receives the attention it needs to meet rigorous quality standards. 
+                            With a focus on precision and efficiency, we deliver tailored solutions that elevate your final products. 
+                            Explore how our Rubber Molding capabilities can add value and enhance your production outcomes.
+                        </p>
+
+                    </div>
+                </a>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a routerLink="/services/mandrel-formed-hoses">
+                    <img src="assets/services/siliconeHoseWrapping.png" alt="Mandrel Formed Hoses"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Mandrel Formed Hoses</h3>
                         <p class="text-gray-700 text-base md:line-clamp-4 line-clamp-3">
                             We produce a wide variety of silicone, fluorosilicone & FKM products including straight couplers, hump hoses, reducers, elbows, t hoses, CAC couplers, and coolant hoses. 
                             We offer nomex/aramid, polyester and fiberglass reinforcement options depending on your requirements
@@ -41,21 +57,6 @@
                 </a>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <a routerLink="/services/rubber-molding">
-                    <img src="assets/services/rubberMolding.png" alt="Rubber Molding Service"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6 text-center">
-                        <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Rubber Molding</h3>
-                        <p class="text-gray-700 text-base md:line-clamp-4 line-clamp-3">Rubber Molding is an essential phase in manufacturing that enhances the functionality and appearance of products. 
-                            Our advanced techniques and skilled team ensure that every item receives the attention it needs to meet rigorous quality standards. 
-                            With a focus on precision and efficiency, we deliver tailored solutions that elevate your final products. 
-                            Explore how our Rubber Molding capabilities can add value and enhance your production outcomes.
-                        </p>
-
-                    </div>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <a routerLink="/services/compounding">
                     <img src="assets/services/compounding.png" alt="Compounding Service"
                         class="w-full h-64 object-cover">
@@ -67,16 +68,15 @@
                     </div>
                 </a>
             </div>
-            <!-- special card -->
-            <div class="bg-white rounded-lg bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg overflow-hidden min-h-full">
-                <a routerLink="/services/other-services">
-                    <img src="assets/services/otherServices.png" alt="Other Services"
-                        class="w-full h-64 object-cover rounded-t-lg">
-                    <div class="p-6 bg-white text-center rounded-b-lg md:min-h-full">
-                        <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Other </h3>
-                        <p class="text-gray-700 text-base md:line-clamp-4 line-clamp-3">Our <span class="font-medium underline">Other</span> manufacturing processes encompass a range of advanced techniques, including calendering, rapid prototyping, compression molding, and extrusion. 
-                            Each method is designed to meet specific project needs, offering flexibility and innovation in product development. With a focus on precision and efficiency, our expert team delivers high-quality solutions tailored to your requirements. 
-                            Explore how these diverse capabilities can enhance your production and drive your projects forward.
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <a routerLink="/services/calendering">
+                    <img src="assets/services/rubber-calendering.png" alt="Calendering Service"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Calendering</h3>
+                        <p class="text-gray-700 text-base md:line-clamp-4 line-clamp-3">Rubber Calendering is the process of mixing raw rubber with various additives to create a custom material with specific properties like strength, flexibility, or heat resistance. 
+                            By carefully selecting and combining elastomers, curing agents, and fillers, we produce high-performance compounds tailored to meet the unique needs of your application.
                         </p>
                     </div>
                 </a>
@@ -84,27 +84,23 @@
 
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <a routerLink="/services/shipping">
-                <img src="assets/services/shippingStocking.png" alt="Shipping & Stocking Service"
-                    class="w-full h-64 object-cover">
-                <div class="p-6 text-center">
-                    <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Shipping & Stocking</h3>
-                    <p class="text-gray-700 text-base md:line-clamp-4 line-clamp-3">Shipping and stocking are critical aspects of ensuring seamless operations and timely delivery in manufacturing. 
-                        Our streamlined processes and efficient logistics management guarantee that your products are handled with care and delivered on schedule. 
-                        With a focus on inventory accuracy and timely dispatch, we ensure your projects remain on track. 
-                        Explore how our shipping and stocking solutions can enhance your supply chain and support your business needs.
-                    <details>
-                        <summary>Read More</summary>
-                        <p> We offer a variety of rice papad flavors, including plain, salted, spicy, and flavored. We
-                            also
-                            offer a variety of sizes and shapes to choose from. Our papad is available in bulk or in
-                            individual packages.</p>
-                    </details>
-                    </p>
-                </div>
+                    <img src="assets/services/shippingStocking.png" alt="Shipping & Stocking Service"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-medium text-[#1a9bc9] mb-2">Shipping & Stocking</h3>
+                        <p class="text-gray-700 text-base md:line-clamp-4 line-clamp-3">Shipping and stocking are critical aspects of ensuring seamless operations and timely delivery in manufacturing. 
+                            Our streamlined processes and efficient logistics management guarantee that your products are handled with care and delivered on schedule. 
+                            With a focus on inventory accuracy and timely dispatch, we ensure your projects remain on track. 
+                            Explore how our shipping and stocking solutions can enhance your supply chain and support your business needs.
+                        </p>
+                    </div>
                 </a>
             </div>
 
+            
         </div>
     </div>
 </section>
+
+<app-rubber-ad />
 

@@ -3,12 +3,10 @@
         <div class="lg:flex lg:items-center">
             <div class="w-full space-y-12 lg:w-1/2 ">
                 <div>
-                    <app-back-to-services />
-                    <h1 class="font-bold text-5xl text-[#007faa] mb-4">Silicone Hose Wrapping</h1>
+                    <h1 class="font-bold text-5xl text-[#007faa] mb-4">Mandrel Formed Hoses</h1>
                     <h2 class="text-md  text-[#4f7583] lg:text-md dark:text-white">
-                        Silicone Hose Wrapping is a manufacturing process in which raw rubber material is forced through a mold (or die) to create continuous shapes with a specific profile. 
-                        This technique is commonly used to produce rubber seals, gaskets, hoses, tubing, and custom profiles for various industries, including automotive, construction, and medical devices. 
-                        The extrusion process ensures high precision and consistency, allowing for the creation of complex cross-sectional shapes in various sizes and lengths.
+                        Mandrel-formed hoses are created using a specialized manufacturing process that involves wrapping a material, typically rubber, thermoplastic, or metal, around a mandrel. 
+                        This internal form shapes the hose during the manufacturing process, resulting in a precise, durable, and flexible product.
                     </h2>
 
                     <div class="mt-2">
@@ -49,11 +47,13 @@
                             Vertical Integration
                         </h2>
 
-                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                        <p class="mt-3 text-gray-500 dark:text-gray-300 mb-4">
                             We compound, calender and process our raw materials from start to finish in house. 
                             This shortens lead times, gives us consistent material availability, and allows for endless customization options. 
                             We do it all in house, from raw material to a finished wrapped hose product!
                         </p>
+                        <a routerLink="/services/compounding" class="bg-yellow-300 text-gray-900 hover:bg-[#37bef0] py-2 px-6 rounded-full  text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg inline-block text-center">Learn more about our Materials</a>
+
                     </div>
                 </div>
 
@@ -82,12 +82,78 @@
 
                 <img class="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full" src="assets/services/siliconeHoseWrapping.png" alt="">
             </div>
+            
+            
 
             
         </div>
 
-        
     </div>
+
+    
+
+        <div class="p-4 tab-content bg-white shadow-md grid grid-cols-1 md:grid-cols-2">
+            <div class="p-20 mx-auto self-center">
+                <h2 class="text-3xl font-semibold mb-2 text-blue-700">
+                    Custom Mandrel Formed Hoses for Every Need, check out some of them
+                </h2>
+                <div class="mb-4">
+                    <p>
+                        Explore our precision-engineered mandrel-formed hoses, designed to meet the toughest demands in various industries. 
+                        Whether it's for high-performance applications or custom specifications, our hoses are crafted for durability, flexibility, and reliability. 
+                        With advanced techniques and tailored solutions, we ensure the perfect fit for your unique requirements. 
+                        Browse through our products to find the ideal solution for your business.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="w-96 mx-auto">
+                <swiper-container class="swiper-container mb-6"  
+                    autoplay="true"
+                    navigation="true"
+                    speed="500" 
+                    pagination="true" 
+                    loop="true"
+                    effect="cards"
+                    grab-cursor="true"
+                    centered-slide="true"
+                >
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/Adapter.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/Elbow 90.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/Hose.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/Elbow.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/Straight Hose.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/Hump.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/Rings.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/mandrel-11.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                    <swiper-slide class="" >
+                        <img loading="lazy" src="/assets/services/silicone-hose-wrapping/mandrel-12.jpg" alt="" width="500" height="516">
+                    </swiper-slide>
+                </swiper-container>
+            </div>
+        </div>
+
+
+
+        
+    
 </section>
 
 
@@ -103,9 +169,14 @@
                     <div class="flex justify-center text-6xl border-1  rounded-md p-1 bg-[#007faa] hover:opacity-90"><img loading="lazy" class="w-full rounded-md bg-red-500" src="assets/services/silicone-hose-wrapping/silicone-hose-wrapping-gallery3.png" /></div>
 
                 </div>
-                <div class="flex justify-center text-6xl border-1  rounded-md p-1 bg-[#007faa] hover:opacity-90 mt-2">
-                    <video class="w-full" autoplay controls loop [muted]="'muted'" loading="lazy" >
+
+                
+                <div class="flex justify-center text-6xl gap-2 mt-2">
+                    <video class="w-1/2 border-4  rounded-md p-2  border-[#007faa] hover:opacity-90" autoplay controls loop [muted]="'muted'" loading="lazy" >
                         <source  src="assets/services/silicone-hose-wrapping/wrapped-silicone-hoses-gallery2.mp4" type="video/mp4">
+                    </video>
+                    <video class="w-1/2 border-4  rounded-md p-2   border-[#007faa] hover:opacity-90" autoplay controls loop [muted]="'muted'" loading="lazy" >
+                        <source  src="assets/services/silicone-hose-wrapping/wrapped-silicone-hoses-gallery5.mp4" type="video/mp4">
                     </video>
                 </div>
 
