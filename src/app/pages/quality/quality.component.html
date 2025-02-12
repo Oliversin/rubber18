@@ -55,23 +55,9 @@
                 </div>
                 
                 <div class="w-full md:w-80 mx-auto">
-                    <swiper-container class="swiper-container mb-6"  
-                        autoplay="true"
-                        navigation="true"
-                        speed="500" 
-                        pagination="true" 
-                        loop="true"
-                        effect="flip"
-                        grab-cursor="true"
-                        centered-slide="true"
-                    >
-                        <swiper-slide class="" >
-                            <img loading="lazy" src="/assets/quality/rheometer-gallery1.png" alt="" width="500" height="516">
-                        </swiper-slide>
-                        <swiper-slide class="" >
-                            <img loading="lazy" src="/assets/quality/rheometer-gallery2.png" alt="" width="500" height="516">
-                        </swiper-slide>
-                    </swiper-container>
+                    <video class=" rounded-md p-1 bg-[#007faa] " autoplay controls loop [muted]="'muted'" loading="edge" poster="/assets/quality/rheometerVidHero.jpg">
+                        <source  src="assets/quality/rheometerVid.mp4" type="video/mp4">
+                    </video>
                 </div>     
             </div>
 
@@ -92,15 +78,41 @@
                 <div class="w-full mx-auto">
 
                     <app-swiperino-slider 
-                        [images]="['/assets/quality/keyence-gallery1.png', 
+                        [images]="[ 
+                                    '/assets/quality/keyence-gallery10.jpg',
+                                    '/assets/quality/keyence-gallery6.png',
+                                    '/assets/quality/keyence-gallery1.png', 
                                     '/assets/quality/keyence-gallery2.png',
                                     '/assets/quality/keyence-gallery3.png',
                                     '/assets/quality/keyence-gallery4.png',
                                     '/assets/quality/keyence-gallery5.png',
-                                    '/assets/quality/keyence-gallery6.png',
                                     ]"
                     />
                 </div>
+                <div>
+                    <div class="p-4 tab-content bg-white  grid grid-cols-1 md:grid-cols-2 pt-6">
+                        <div class="self-center">
+                            <h2 class="text-2xl font-semibold mb-2 text-blue-700">
+                                Precise Measurements!
+                            </h2>
+                            <div class="mb-4">
+                                <p>
+                                    Not only can we use this cutting edge technology to quickly and accurately take measurements of molded parts, but we also use it for measurements of mold components. 
+                                    We can take many measurements in a matter of seconds for critical components of molds to ensure that all dimensions are in specification before molding parts to save time, and ensure molds are made to specification the first time. 
+                                    We can take measurements with 0.00007" (2um) of precision with this tool.
+                                </p>
+                            </div>
+                        </div>
+                        
+        
+                        <div class="mt-2">
+                            <img src="/assets/quality/inDetailKeyence.jpg" alt="Keyence Screen" class="w-4/5 mx-auto transition duration-500 hover:scale-125 rounded-md p-1 bg-[#007faa] hover:opacity-90">
+        
+                        </div>
+                    </div>
+                    
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-8 mt-2">
 
                     <video class="w-full  rounded-md p-1 bg-[#007faa] hover:opacity-90" autoplay controls loop [muted]="'muted'" loading="lazy" >
@@ -131,7 +143,7 @@
                     </p>
                 </div>
 
-                <div class="w-full mx-auto">
+                <div class="w-full mx-auto" id="doss">
 
                     <app-swiperino-slider 
                         [images]="['/assets/quality/doss-gallery1.png', 
@@ -141,6 +153,8 @@
                                     ]"
                     />
                 </div>
+
+                
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-2 md:gap-8 mt-2">
 
                     <video class="w-1/2 mx-auto  rounded-md p-1 bg-[#007faa] hover:opacity-90" autoplay controls loop [muted]="'muted'" loading="lazy" >
@@ -166,8 +180,8 @@
 
                 <div class="  mt-2">
 
-                    <video class="w-2/5 mx-auto  rounded-md p-1 bg-[#007faa] hover:opacity-90" autoplay controls loop [muted]="'muted'" loading="lazy" >
-                        <source  src="assets/quality/tensile-tester1.mp4" type="video/mp4">
+                    <video class="w-2/5 mx-auto  rounded-md p-1 bg-[#007faa] hover:opacity-90" autoplay controls loop [muted]="'muted'" loading="edge" >
+                        <source  src="assets/quality/tensile-tester-video.mp4" type="video/mp4">
                     </video>
 
                 </div>

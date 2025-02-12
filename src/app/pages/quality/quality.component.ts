@@ -24,6 +24,58 @@ import { SwiperOptions } from 'swiper/types';
 })
 export default class QualityComponent implements AfterViewInit {
 
+  constructor(private meta: Meta, private titleService: Title, protected vars: GlobalVars) { }
+  
+  ngOnInit(): void {
+    this.setMetaTags();
+  }
+
+  private setMetaTags() {
+    this.titleService.setTitle('Quality Assurance - Rubber-Mexico');
+
+    // Standard Meta Tags
+    this.addMetaTag('description', 'At Rubber-Mexico, we ensure precision and reliability through advanced testing with rheometers, Keyence visual inspection, and more. We provide high-quality rubber extrusion for automotive, medical, and custom parts');
+    this.addMetaTag('keywords', 'Rubber extrusion service, Custom rubber extrusion, Rubber seals and gaskets, Rubber hoses and tubing, Extruded rubber profiles, Precision rubber extrusion, Rubber manufacturing, Automotive rubber parts, Medical rubber components, Rubber extrusion Mexico and extrusion, Custom rubber shapes');
+
+    // Open Graph Meta Tags
+    this.addMetaTag('og:title', 'Quality Assurance - Rubber-Mexico', 'property');
+    this.addMetaTag('og:description', 'At Rubber-Mexico, we ensure precision and reliability through advanced testing with rheometers, Keyence visual inspection, and more. We provide high-quality rubber extrusion for automotive, medical, and custom parts', 'property');
+    this.addMetaTag('og:image', '/assets/quality/keyence-gallery2.png', 'property');
+
+    // Twitter Card Tags
+    this.addMetaTag('twitter:card', 'summary_large_image');
+    this.addMetaTag('twitter:title', 'Quality Assurance - Rubber-Mexico');
+    this.addMetaTag('twitter:description', 'At Rubber-Mexico, we ensure precision and reliability through advanced testing with rheometers, Keyence visual inspection, and more. We provide high-quality rubber extrusion for automotive, medical, and custom parts');
+    this.addMetaTag('twitter:image', '/assets/quality/keyence-gallery2.png');
+
+    // Robots Meta Tag
+    this.addMetaTag('robots', 'index, follow');
+    // Canonical Tag
+    this.addCanonicalTag('https://rubber-mexico.com/quality-assurance');
+  }
+
+  private addCanonicalTag(url: string) {
+    // Remove existing canonical link tag if present
+    const existingCanonical = this.meta.getTag('rel="canonical"');
+    if (existingCanonical) {
+      this.meta.removeTagElement(existingCanonical);
+    }
+  
+    // Add the new canonical link tag
+    const linkTag = document.createElement('link');
+    linkTag.setAttribute('rel', 'canonical');
+    linkTag.setAttribute('href', url);
+    document.head.appendChild(linkTag);
+  }
+
+  private addMetaTag(name: string, content: string, type: string = 'name') {
+    // Remove existing tag if present
+    this.meta.removeTag(`${type}='${name}'`);
+    this.meta.addTag({ [type]: name, content });
+  }
+
+  
+
   slidesPerView = 3;
   breakpoints = {
     300: {

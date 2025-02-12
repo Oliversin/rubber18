@@ -16,11 +16,14 @@ export class GlobalVars {
     rotomoldingMachines = $localize `37 CNC machines`;
     warehouses = $localize `West Coast, East Coast, and even in Mexico`;
     hours = $localize `Monday - Friday : 8AM - 5:30pm`;
-
     logoImage= "assets/logoHeaderino.png";
 
+    ///contentThatDidntExpectToneedToReuseThatManyTimes
+    materialsImage = '/assets/materials.jpg'
+    moldMakingImage = '/assets/moldMaking.jpg'
+
     navItems = [
-        { label: 'Home', link: '/' },
+        { label: 'Home', link: '/home' },
         { label: 'Services', link: '/services' },
         { label: 'About', link: '/about' },
         { label: 'Quality', link: '/quality' },

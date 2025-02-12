@@ -5,9 +5,14 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
-            
+
             {
                 path: '',
+                redirectTo: 'home',
+                pathMatch: 'full'
+            },
+            {
+                path: 'home',
                 loadComponent: () => import('./pages/home/home.component'),
                 
             },
@@ -37,10 +42,6 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/shipping/shipping.component')
             },
             {
-                path: 'services/post-processing',
-                loadComponent: () => import('./pages/post-processing/post-processing.component')
-            },
-            {
                 path: 'services/foam-insulation',
                 loadComponent: () => import('./pages/foam-insulation/foam-insulation.component')
             },
@@ -65,12 +66,48 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/rubber-molding/rubber-molding.component')
             },
             {
+                path: 'services/rubber-molding/compression-molding',
+                loadComponent: () => import('./pages/compression-molding/compression-molding.component')
+            },
+            {
+                path: 'services/rubber-molding/transfer-molding',
+                loadComponent: () => import('./pages/transfer-molding/transfer-molding.component')
+            },
+            {
                 path: 'services/rubber-molding/more-processes',
                 loadComponent: () => import('./pages/more-molding-processes/more-molding-processes.component')
             },
             {
                 path: 'services/rubber-molding/mold-making',
                 loadComponent: () => import('./pages/mold-making/mold-making.component')
+            },
+            {
+                path: 'rubber-molding/products/o-rings',
+                loadComponent: () => import('./pages/products/rubber-molding/o-rings/o-rings.component')
+            },
+            {
+                path: 'rubber-molding/products/boots',
+                loadComponent: () => import('./pages/products/rubber-molding/boots/boots.component')
+            },
+            {
+                path: 'rubber-molding/products/bushings',
+                loadComponent: () => import('./pages/products/rubber-molding/bushings/bushings.component')
+            },
+            {
+                path: 'rubber-molding/products/bump-stops',
+                loadComponent: () => import('./pages/products/rubber-molding/bump-stops/bump-stops.component')
+            },
+            {
+                path: 'mandrel-formed-hoses/products/charge-air-cooler-hose-stainless-rings',
+                loadComponent: () => import('./pages/products/mandrel-formed-hoses/charge-air-cooler-hose-stainless-rings/charge-air-cooler-hose-stainless-rings.component')
+            },
+            {
+                path: 'mandrel-formed-hoses/products/fmk-lined-silicone-hoses',
+                loadComponent: () => import('./pages/products/mandrel-formed-hoses/fmk-lined-silicone-hoses/fmk-lined-silicone-hoses.component')
+            },
+            {
+                path: 'mandrel-formed-hoses/products/fvmq-lined-silicone-hoses',
+                loadComponent: () => import('./pages/products/mandrel-formed-hoses/fvmq-lined-silicone-hoses/fvmq-lined-silicone-hoses.component')
             },
             {
                 path: 'engineers',
@@ -87,10 +124,8 @@ export const routes: Routes = [
 
         ]
     },
-    /*
     {
         path: '**',
-        redirectTo: '',
+        redirectTo: 'home',
     },
-    */
 ];

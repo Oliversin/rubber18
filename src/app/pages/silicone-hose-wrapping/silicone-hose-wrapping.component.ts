@@ -7,11 +7,12 @@ import { SwiperinoSliderComponent } from '../../shared/components/swiperino-slid
 import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
+import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 
 @Component({
   selector: 'app-silicone-hose-wrapping',
   standalone: true,
-  imports: [RouterLink, BackToServicesComponent,SwiperinoSliderComponent],
+  imports: [RouterLink, BackToServicesComponent,SwiperinoSliderComponent, ProductCardComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers:[GlobalVars],
   templateUrl: './silicone-hose-wrapping.component.html',
@@ -71,6 +72,22 @@ export default class SiliconeHoseWrappingComponent implements OnInit {
 
     // Robots Meta Tag
     this.addMetaTag('robots', 'index, follow');
+    // Canonical Tag
+    this.addCanonicalTag('https://rubber-mexico.com/services/mandrel-formed-hoses');
+  }
+
+  private addCanonicalTag(url: string) {
+    // Remove existing canonical link tag if present
+    const existingCanonical = this.meta.getTag('rel="canonical"');
+    if (existingCanonical) {
+      this.meta.removeTagElement(existingCanonical);
+    }
+  
+    // Add the new canonical link tag
+    const linkTag = document.createElement('link');
+    linkTag.setAttribute('rel', 'canonical');
+    linkTag.setAttribute('href', url);
+    document.head.appendChild(linkTag);
   }
 
   private addMetaTag(name: string, content: string, type: string = 'name') {

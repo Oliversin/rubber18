@@ -35,5 +35,12 @@ export class HeadComponent {
     this.isMenuHidden = !this.isMenuHidden;
     console.log("el pepe");
   }
+
+  closeMenu() {
+    const menuToggle = document.getElementById('menu__toggle') as HTMLInputElement;
+    if (menuToggle) {
+      menuToggle.checked = false;
+    }
+  }
   
 }

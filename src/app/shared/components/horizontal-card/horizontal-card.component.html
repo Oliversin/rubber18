@@ -1,9 +1,9 @@
 <div class="bg-white border rounded-xl shadow-sm sm:flex">
-    <div class="shrink-0 relative w-full rounded-t-xl overflow-hidden pt- sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-sm">
-      <img class="size-full absolute top-0 start-0 object-cover" src="{{imageUrl}}" alt="Card Image">
+    <div class="shrink-0 md:relative md:w-full  mx-auto rounded-t-xl overflow-hidden pt- sm:rounded-s-xl sm:max-w-60 md:rounded-se-none md:max-w-sm">
+      <img class="w-full h-64 object-cover" src="{{imageUrl}}" alt="">
     </div>
     <div class="flex flex-wrap">
-      <div class="p-4 flex flex-col h-full sm:p-7">
+      <div class="p-2 flex flex-col h-full sm:p-7">
         <h3 class="text-5xl font-bold text-[#007faa] mx-auto mb-4">
             {{ title | titlecase }}
         </h3>
@@ -11,7 +11,7 @@
             {{ description | titlecase }}
         </p>
         <div class="mt-5 sm:mt-auto">
-          <a class="text-lg text-blue-500" [routerLink]="link">
+          <a class="bg-yellow-300 text-gray-900 hover:bg-[#37bef0] py-2 px-6 rounded-full  text-md font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg inline-block text-center" [routerLink]="link">
             {{learnText}} 
           </a>
         </div>

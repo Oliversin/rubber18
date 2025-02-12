@@ -6,6 +6,7 @@ import { PartnersTrustComponent } from '../../shared/components/partners-trust/p
 import { GlobalVars } from '../../global-vars';
 import { HlmCarouselComponent, HlmCarouselContentComponent, HlmCarouselItemComponent, HlmCarouselNextComponent, HlmCarouselPreviousComponent } from '@spartan-ng/ui-carousel-helm';
 import { HorizontalCardComponent } from '../../shared/components/horizontal-card/horizontal-card.component';
+import { FormContactComponent } from "../../shared/components/form-contact/form-contact.component";
 
 
 
@@ -13,7 +14,7 @@ import { HorizontalCardComponent } from '../../shared/components/horizontal-card
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink,GalleryComponent, HorizontalCardComponent,PartnersTrustComponent, HlmCarouselComponent, HlmCarouselContentComponent,HlmCarouselItemComponent, HlmCarouselNextComponent, HlmCarouselPreviousComponent],
+  imports: [RouterLink, GalleryComponent, HorizontalCardComponent, FormContactComponent, PartnersTrustComponent, HlmCarouselComponent, HlmCarouselContentComponent, HlmCarouselItemComponent, HlmCarouselNextComponent, HlmCarouselPreviousComponent, FormContactComponent],
   providers: [GlobalVars],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -44,10 +45,23 @@ export default class HomeComponent implements OnInit{
     this.addMetaTag('twitter:image', '/assets/logoHeader.png'); // Update with the correct image path
 
      // Robots Meta Tag
-     this.addMetaTag('robots', 'index, follow');
+    this.addMetaTag('robots', 'index, follow');
+    // Canonical Tag
+    this.addCanonicalTag('https://rubber-mexico.com/home');
+  }
 
-     // Canonical Meta Tag
-     this.addMetaTag('canonical', 'https://www.rubber-mexico.com'); // Replace with the correct canonical URL
+  private addCanonicalTag(url: string) {
+    // Remove existing canonical link tag if present
+    const existingCanonical = this.meta.getTag('rel="canonical"');
+    if (existingCanonical) {
+      this.meta.removeTagElement(existingCanonical);
+    }
+  
+    // Add the new canonical link tag
+    const linkTag = document.createElement('link');
+    linkTag.setAttribute('rel', 'canonical');
+    linkTag.setAttribute('href', url);
+    document.head.appendChild(linkTag);
   }
 
   private addMetaTag(name: string, content: string, type: string = 'name') {

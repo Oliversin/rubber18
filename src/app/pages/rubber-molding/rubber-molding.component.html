@@ -19,21 +19,29 @@
 </section>
 
 <section class="bg-gray-100">
-    <div class="grid md:grid-cols-1 grid-cols-1 md:m-8  gap-y-4 pt-4">
+    <div class="grid md:grid-cols-1 grid-cols-1 md:m-8 mx-4  md:gap-y-4 gap-y-2 pt-4 max-w-sm md:max-w-fit">
         <app-horizontal-card
-            title="Molding Processes"
-            learnText="Learn more about Molding Processes"
+            title="Compression Molding"
+            learnText="Learn more about Compression Molding"
             imageUrl="assets/services/rubber-molding/molding-processes/compression-molding/compression-molding-gallery3.png"
-            description="We provide comprehensive rubber boot manufacturing services, specializing in custom designs to meet a variety of applications. Using cutting-edge molding technology and advanced compounding capabilities, we can deliver boots in any size, shape, or material specification. Whether you need enhanced durability, flexibility, or weather resistance, our team ensures that each boot meets the highest standards for performance and reliability. We take pride in our ability to meet tight deadlines and deliver products that align with your unique requirements. Trust us for precision-engineered rubber boots that excel in demanding environments."
-            link="/services/rubber-molding/more-processes"
+            description="Compression molding is an ideal manufacturing process for producing complex, high-volume parts, particularly in industries that require rubber or rubber-like materials. This method involves placing a pre-measured amount of material, typically in the form of a rubber compound or thermosetting plastic, into a heated mold cavity. The mold is then closed, and pressure is applied to shape the material into the desired form. The heat causes the material to cure or harden, solidifying the part into its final shape."
+            link="/services/rubber-molding/compression-molding"
+        />
+
+        <app-horizontal-card
+            title="Transfer Molding"
+            learnText="Learn more about Transfer Molding"
+            imageUrl="/assets/services/rubber-molding/molding-processes/transfer-molding/transferMolding.jpg"
+            description="Transfer molding is a versatile manufacturing process that combines elements of both injection molding and compression molding to produce high-quality, detailed, and high-strength components. This method is particularly valued for its ability to create parts with excellent surface finishes and precise geometries, making it well-suited for industries where precision and durability are critical, such as in the production of electrical components, seals, and specialized industrial parts."
+            link="/services/rubber-molding/transfer-molding"
         />
 
         <app-horizontal-card
             title="Mold Making"
             learnText="Learn more about our Mold making"
-            imageUrl="/assets/services/rubber-molding/bump-stops/bumpStop1.png"
+            imageUrl="{{vars.moldMakingImage}}"
             link="/services/rubber-molding/mold-making"
-            description="We are a top manufacturer of rubber bump stops with 10s of different bumps that we actively make. We are able to overmold hardware, or custom machined steel pieces to go along with the bump stop. We have experience making bump stops from microcellular polyurethane foam, elastomer polyurethane (for best abrasion resistance), as well as with NBR, silicone and more. Nobody has more experience and applications of body mounts than us. We have molds for many of the top applications and we can use our experience to develop bumps stops for your specific application."
+            description="With more than 37 CNC machines running 24/7 and more than 20 engineers, we machine a wide variety of molds in house. Metal raw materials are stocked, allowing us to sprint into production in industry leading time."
         />
 
         <app-horizontal-card
@@ -49,7 +57,7 @@
             title="Materials"
             learnText="Learn more about our Materials"
             link="/services/compounding"
-            imageUrl="/assets/services/rubberMolding.png"
+            imageUrl="{{vars.materialsImage}}"
             description="Rubber Mexico has 3 chemists, a full service rubber lab that supports our molding department, but that also allows us to compound nearly all of the rubber that we use internally. We have large silicone kneaders allowing us to compound silicone from the polymer, unlike nearly every other silicone parts manufacturer that purchases just adds colorant and curatives on a two roll mill. We are one of the largest manufacturers of silicone and fluorosilicone products in North America with hundreds of existing compounds that we have developed over decades. Very few companies have more experience or scale with silicone rubber than us, we cannot be beat with silicone molded products."
         />
 
@@ -58,31 +66,53 @@
 
 
 <section>
-    
+
     <div class="mx-auto px-4 my-3">
         <hr class="my-6 border-gray-200 dark:border-gray-700">
-        <h2 class="text-4xl bg-[#007faa] p-2 m-3 md:p-4 md:m-6 rounded-3xl text-white text-center hover:opacity-75">Product Types  </h2>
+        <h2 class="text-4xl bg-[#007faa] p-2 m-3 md:p-4 md:m-6 rounded-3xl text-white text-center hover:opacity-75">Example Product Types  </h2>
     </div>
+    <div class="container mx-auto px-4">
+        
 
-    <div class="grid md:grid-cols-3 grid-cols-1 md:mx-8  gap-8 ">
-        <app-product-card
-            title="Boots/Bellows"
-            imageUrl="/assets/services/rubber-molding/boots/rubber-boots-gallery4.png"
-            description="We provide comprehensive rubber boot manufacturing services, specializing in custom designs to meet a variety of applications. Using cutting-edge molding technology and advanced compounding capabilities, we can deliver boots in any size, shape, or material specification. Whether you need enhanced durability, flexibility, or weather resistance, our team ensures that each boot meets the highest standards for performance and reliability. We take pride in our ability to meet tight deadlines and deliver products that align with your unique requirements. Trust us for precision-engineered rubber boots that excel in demanding environments."
-        />
+        <div class="grid md:grid-cols-3 grid-cols-1 md:mx-8  gap-8 ">
+            <app-product-card
+                title="Boots/Bellows"
+                link="/rubber-molding/products/boots"
+                imageUrl="/assets/services/rubber-molding/boots/rubber-boots-gallery4.png"
+                description="We provide comprehensive rubber boot manufacturing services, specializing in custom designs to meet a variety of applications. Using cutting-edge molding technology and advanced compounding capabilities, we can deliver boots in any size, shape, or material specification. Whether you need enhanced durability, flexibility, or weather resistance, our team ensures that each boot meets the highest standards for performance and reliability. We take pride in our ability to meet tight deadlines and deliver products that align with your unique requirements. Trust us for precision-engineered rubber boots that excel in demanding environments."
+            />
 
-        <app-product-card
-            title="Bumbp stops"
-            imageUrl="/assets/services/rubber-molding/bump-stops/bumpStop1.png"
-            description="We are a top manufacturer of rubber bump stops with 10s of different bumps that we actively make. We are able to overmold hardware, or custom machined steel pieces to go along with the bump stop. We have experience making bump stops from microcellular polyurethane foam, elastomer polyurethane (for best abrasion resistance), as well as with NBR, silicone and more. Nobody has more experience and applications of body mounts than us. We have molds for many of the top applications and we can use our experience to develop bumps stops for your specific application."
-        />
+            <app-product-card
+                title="Bump stops"
+                link="/rubber-molding/products/bump-stops"
+                imageUrl="/assets/services/rubber-molding/bump-stops/bumpStop1.png"
+                description="We are a top manufacturer of rubber bump stops with 10s of different bumps that we actively make. We are able to overmold hardware, or custom machined steel pieces to go along with the bump stop. We have experience making bump stops from microcellular polyurethane foam, elastomer polyurethane (for best abrasion resistance), as well as with NBR, silicone and more. Nobody has more experience and applications of body mounts than us. We have molds for many of the top applications and we can use our experience to develop bumps stops for your specific application."
+            />
 
-        <app-product-card
-            title="Bushings"
-            imageUrl="/assets/services/rubber-molding/bushings/bushings-3.png"
-            description="Cast polyurethane bushings for the best abrasion resistance. Various hardness depending on the application. Injection molded polyurethane bushings as well for higher volume application."
-        />
+            <app-product-card
+                title="Bushings"
+                link="/rubber-molding/products/bushings"
+                imageUrl="/assets/services/rubber-molding/bushings/bushings-3.png"
+                description="Cast polyurethane bushings for the best abrasion resistance. Various hardness depending on the application. Injection molded polyurethane bushings as well for higher volume application."
+            />
 
+            <app-product-card
+                title="O Rings"
+                imageUrl="/assets/products/rubber-molding/o-rings/O-Rings1.jpg"
+                link="/rubber-molding/products/o-rings"
+                description="
+                We maufacturer o rings per many industry standards with the most common being AS568. We have existing family tooling for many common sizes. 
+                We make o rings from many materials including VMQ (Silicone), FVMQ (Fluorosilicone), FKM (Viton), NBR, HNBR, EPDM, and many more.
+                We have a visual inspection system that is able to inspect every part from 7 different angles, including from below through a high quality glass table. 
+                We inspect flash, cross section, diameters, as well as look for visual issues like non fills, inclusion of foreign materials, uncured spots and more in 100% of the parts we make up to 80mm in diameter. 
+                This system automatically sorts out the parts out of spec and ensures that 100% of the parts we ship to our customers meet the requirements.
+                We have hundreds of existing compounds with testing data so in most cases we can reference our test bank to choose a compound that meets the customer's requirements without additional testing. 
+                We compound all of these rubbers in house, and stock raw material for quick turn arounds. 
+                "
+            />
+
+
+        </div>
     </div>
 </section>
 

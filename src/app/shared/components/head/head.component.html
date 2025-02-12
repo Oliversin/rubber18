@@ -1,4 +1,32 @@
-<nav class="bg-[#006488] border border-black dark:border-gray-700 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow">
+<div class="hamburger-menu md:hidden bg-[#006488]">
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn " for="menu__toggle">
+    <span></span>
+  </label>
+
+  <ul class="menu__box">
+    @for (item of vars.navItems; track item.link){
+      <li>
+        <a
+          [routerLink]="item.link"
+          routerLinkActive="bg-[#37bef0]"
+          class="menu__item"
+          aria-current="page"
+          (click)="closeMenu()"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    }
+  </ul>
+  <a href="/" class="flex items-center ml-20">
+    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+      <img src="{{vars.logoImage}}" alt="logo" class="mr-5 md:h-6 sm:h-9 h-auto max-w-full">
+    </span>
+  </a>
+</div>
+
+<nav class="md:block hidden bg-[#006488] border border-black dark:border-gray-700 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="/" class="flex items-center">
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">

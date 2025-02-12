@@ -24,19 +24,19 @@ export default class RubberExtrusionComponent implements OnInit {
     this.titleService.setTitle('Rubber Extrusion Services - Rubber-Mexico');
 
     // Standard Meta Tags
-    this.addMetaTag('description', 'Discover high-quality rubber extrusion services at Rubber-Mexico. We specialize in producing custom rubber seals, gaskets, hoses, and profiles with precision and consistency for industries like automotive, construction, and medical devices');
-    this.addMetaTag('keywords', 'Rubber extrusion service, Custom rubber extrusion, Rubber seals and gaskets, Rubber hoses and tubing, Extruded rubber profiles, Precision rubber extrusion, Rubber manufacturing, Automotive rubber parts, Medical rubber components, Rubber extrusion Mexico, Rubber molding and extrusion, Custom rubber shapes');
+    this.addMetaTag('description', 'High-quality Rubber Extrusion. We specialize in producing custom rubber seals, gaskets, hoses, and profiles with precision and consistency for industries like automotive, construction, and medical devices');
+    this.addMetaTag('keywords', 'Rubber extrusion service, Custom rubber extrusion, Rubber seals and gaskets, Rubber hoses and tubing, Extruded rubber profiles, Precision rubber extrusion, Rubber manufacturing, Automotive rubber parts, Medical rubber components, Rubber extrusion Mexico and extrusion, Custom rubber shapes');
 
     // Open Graph Meta Tags
     this.addMetaTag('og:title', 'Rubber Extrusion Services - Rubber-Mexico', 'property');
-    this.addMetaTag('og:description', 'Discover high-quality rubber extrusion services at Rubber-Mexico. We specialize in producing custom rubber seals, gaskets, hoses, and profiles with precision and consistency for industries like automotive, construction, and medical devices', 'property');
-    this.addMetaTag('og:image', '/assets/shippingImage.png', 'property');
+    this.addMetaTag('og:description', 'High-quality Rubber Extrusion. We specialize in producing custom rubber seals, gaskets, hoses, and profiles with precision and consistency for industries like automotive, construction, and medical devices', 'property');
+    this.addMetaTag('og:image', '/assets/services/rubberExtrusion.png', 'property');
 
     // Twitter Card Tags
     this.addMetaTag('twitter:card', 'summary_large_image');
     this.addMetaTag('twitter:title', 'Rubber Extrusion Services - Rubber-Mexico');
-    this.addMetaTag('twitter:description', 'Discover high-quality rubber extrusion services at Rubber-Mexico. We specialize in producing custom rubber seals, gaskets, hoses, and profiles with precision and consistency for industries like automotive, construction, and medical devices');
-    this.addMetaTag('twitter:image', '/assets/shippingImage.png');
+    this.addMetaTag('twitter:description', 'High-quality Rubber Extrusion. We specialize in producing custom rubber seals, gaskets, hoses, and profiles with precision and consistency for industries like automotive, construction, and medical devices');
+    this.addMetaTag('twitter:image', '/assets/services/rubberExtrusion.png');
 
     // Robots Meta Tag
     this.addMetaTag('robots', 'index, follow');
