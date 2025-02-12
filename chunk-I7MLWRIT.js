@@ -1,0 +1,1 @@
+import{X as s,Ya as o,Za as a,ib as i,ob as r}from"./chunk-5ZJPCNRF.js";var e=class e{};e.\u0275fac=function(t){return new(t||e)},e.\u0275cmp=s({type:e,selectors:[["app-bushings"]],standalone:!0,features:[r],decls:2,vars:0,template:function(t,u){t&1&&(o(0,"p"),i(1,"bushings works!"),a())}});var n=e;export{n as default};

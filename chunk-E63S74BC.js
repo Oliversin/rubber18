@@ -1,0 +1,1 @@
+import{X as s,Ya as n,Za as p,ib as a,ob as m}from"./chunk-5ZJPCNRF.js";var e=class e{};e.\u0275fac=function(t){return new(t||e)},e.\u0275cmp=s({type:e,selectors:[["app-bump-stops"]],standalone:!0,features:[m],decls:2,vars:0,template:function(t,i){t&1&&(n(0,"p"),a(1,"bump-stops works!"),p())}});var o=e;export{o as default};
